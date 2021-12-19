@@ -5,11 +5,12 @@
 
 /* banner */
 .lg-banner {
-    background: url(../img/lg-banner.jpeg) no-repeat 50%/cover; 
-    background-clip: content-box;
     margin-left: -11.3333%;
 }
 
+.bg-cover {
+    background: no-repeat 50%/cover;
+}
 /* .vw-50 {
     width: 50vw!important;
 } */
@@ -31,8 +32,8 @@
 }
 
 .l-avatar {
-    width: 32px;
-    height: 32px;
+    width: 42px;
+    height: 42px;
     display: inline-block;
 }
 
