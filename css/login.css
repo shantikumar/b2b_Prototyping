@@ -1,0 +1,26 @@
+
+/* banner */
+.lg-banner {
+    background: url(../img/lg-banner.jpeg) no-repeat 50%/cover; 
+    background-clip: content-box;
+    margin-left: -11.3333%;
+}
+
+/* .vw-50 {
+    width: 50vw!important;
+} */
+
+/* logo */
+.h-brand {
+    display: inline-block;
+    width: 261px;
+    height: 81px;
+}
+
+/* form */
+.filled-text .i-addon {
+    position: absolute;
+    top:16px;
+    right:16px;
+    color: rgba(0,0,0,.4);
+}
