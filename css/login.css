@@ -1,4 +1,8 @@
 
+
+/* this CSS is related to login and forgot password pages */
+
+
 /* banner */
 .lg-banner {
     background: url(../img/lg-banner.jpeg) no-repeat 50%/cover; 
@@ -13,9 +17,10 @@
 /* logo */
 .h-brand {
     display: inline-block;
-    width: 261px;
+    width: 231px;
     height: 81px;
 }
+
 
 /* form */
 .filled-text .i-addon {
@@ -23,6 +28,17 @@
     top:16px;
     right:16px;
     color: rgba(0,0,0,.4);
+}
+
+.l-avatar {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.success-icon span {
+    font-size: 48px;
+    color: #00D287;
 }
 
 @media (min-width: 768px) {

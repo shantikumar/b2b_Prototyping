@@ -33,6 +33,14 @@ body {
     border-radius: 20px;
 }
 
+.btn-primary.disabled, 
+.btn-primary:disabled {
+    background-color: #CCCCCC;
+    color: #868686;
+    border-color: #CCCCCC;
+    cursor: not-allowed !important;
+}
+
 img {
     width: 100%;
     height: 100%;
