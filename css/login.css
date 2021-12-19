@@ -25,9 +25,13 @@
     color: rgba(0,0,0,.4);
 }
 
-@media (min-width: 1199px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px){
     .lg-banner {
         margin-left: -23.3333%;
     }
+}
+
+@media (min-width: 1199px) and (max-width: 1200px) {
+    
 }
 
