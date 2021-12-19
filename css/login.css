@@ -32,3 +32,8 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .lg-banner {
+        margin-left: -23.3333%;
+    }
+}
