@@ -16,59 +16,63 @@
     </head>
     <body>
         
-        <div class="container-lg d-flex flex-column">
+        <div class="container-fluid">
             <div class="row align-items-top justify-content-center gx-0 min-vh-100 mt-n1">
 
                 <div class="col-xl-6 col-lg-6 col-md-6 align-self-stretch d-none d-lg-block">
-                    <div class="lg-banner h-100 bg-cover border-top border-top-4 border-transparent" style="background-image: url(img/lg-banner.jpeg); background-clip: content-box;"></div>
+                    <div class="lg-banner h-100 bg-cover border-transparent" style="background-image: url(img/lg-banner.jpeg);"></div>
                 </div> 
                 
-                <div class="col-sm-12 col-md-7 col-lg-5 offset-lg-1 py-10 py-md-12">
+                <div class="col-md-6 col-12 login-form">
+                    <div class="login-form-content">
+                        <div class="h-brand my-5">
+                            <img src="img/Logo-Yas-Marina.png" alt="Eventer">
+                        </div>
 
-                    <a href="javascript:void(0)" class="h-brand my-5"><img src="img/h-brand.jpg" alt="Eventer"></a>
+                        <h1>Update your password</h1>
+                        <div class="mt-4 mb-5">
+                            <span class="l-avatar">
+                                <img src="img/l-avatar.jpg" class="user">
+                            </span>
+                            <span class="ms-2">userEmailAddress@email.com</span>
+                        </div>
+            
+                        <!-- Form -->
+                        <form class="mb-6">
 
-                    <h1>Update your password</h1>
-                    <div class="mt-4 mb-5">
-                        <span class="l-avatar">
-                            <img src="img/l-avatar.jpg" class="user">
-                        </span>
-                        <span class="ms-2">userEmailAddress@email.com</span>
+                            <div class="form-group filled-text">
+                                <input type="text" class="form-control" id="exampleInputEmail1" required autofocus>
+                                <span class="form-bar"></span>
+                                <label class="form-label" for="exampleInputEmail1">New Password</label>
+                                <a href="#" id="tg-eye" class="i-addon"><span class="material-icons">visibility_off</span></a>
+                            </div>
+
+                            <div class="form-group filled-text">
+                                <input type="password" class="form-control" id="passwordID" required>
+                                <span class="form-bar"></span>
+                                <label class="form-label" for="passwordID">Confirm Password</label>
+                                <a href="#" id="tg-eye" class="i-addon"><span class="material-icons">visibility_off</span></a>
+                            </div>
+                            
+                            <div class="row align-items-center mt-5">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">Logout of all active logins</label>
+                                    </div>
+            
+                                </div>
+                                <div class="col-6">
+                                    <!-- <button class="btn btn-primary float-end" disabled>Continue</button> -->
+                                    <a href="reset-success.html" class="btn btn-primary float-end" disabled>Continue</a>
+                                </div>
+                            </div>
+            
+                        </form>
+                        <div class="start-footer-text align-items-bottom">
+                            <p>&copy; 2021-2022 B2B System. All Rights Reserved.</p>
+                        </div>
                     </div>
-        
-                    <!-- Form -->
-                    <form class="mb-6">
-
-                        <div class="form-group filled-text">
-                            <input type="text" class="form-control" id="exampleInputEmail1" required autofocus>
-                            <span class="form-bar"></span>
-                            <label class="form-label" for="exampleInputEmail1">New Password</label>
-                            <a href="#" id="tg-eye" class="i-addon"><span class="material-icons">visibility_off</span></a>
-                        </div>
-
-                        <div class="form-group filled-text">
-                            <input type="password" class="form-control" id="passwordID" required>
-                            <span class="form-bar"></span>
-                            <label class="form-label" for="passwordID">Confirm Password</label>
-                            <a href="#" id="tg-eye" class="i-addon"><span class="material-icons">visibility_off</span></a>
-                        </div>
-                        
-                        <div class="row align-items-center mt-5">
-                            <div class="col-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">Logout of all active logins</label>
-                                  </div>
-        
-                            </div>
-                            <div class="col-6">
-                                <!-- <button class="btn btn-primary float-end" disabled>Continue</button> -->
-                                <a href="reset-success.html" class="btn btn-primary float-end" disabled>Continue</a>
-                            </div>
-                        </div>
-        
-                    </form>
-    
-        
                   </div>
                   
             </div>
