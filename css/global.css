@@ -51,12 +51,12 @@ img {
 
 
 
-.form-error .filled-text input.form-control,
-.form-error .filled-text input.form-control:focus{
+.filled-text.error input.form-control,
+.filled-text.error input.form-control:focus{
     border-bottom-color: #B00020 !important;
 }
-.form-error .filled-text .form-label,
-.form-error .filled-text input.form-control:focus ~ .form-label {
+.filled-text.error .form-label,
+.filled-text.error input.form-control:focus ~ .form-label {
     color: #B00020 !important;
 }
 
