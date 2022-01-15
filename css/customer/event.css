@@ -1,0 +1,54 @@
+main .nav-tabs {border: none;}
+main .nav-tabs .nav-link,
+main .nav-tabs .nav-link.active,
+main .nav-tabs .nav-link:focus, 
+main .nav-tabs .nav-link:hover {
+    background: transparent;
+    border: none; 
+    margin:0; 
+    border-radius: 0;
+    padding-left: 0;
+    margin-right: 16px;
+}
+
+main .nav-tabs .nav-link {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    font-weight: 300;
+}
+main .nav-tabs .nav-link.active {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 600;
+}
+main .nav-tabs .nav-link:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+main .tab-content .card {
+    border: transparent;
+    border-radius: 0 10px 10px 0 !important;
+    cursor: pointer;
+}
+main .tab-content .card:hover {
+    -webkit-transition: background 3s ease;
+    -moz-transition: background 3s ease;
+    transition: background 3s ease;
+    box-shadow: 0 .245rem .65rem rgba(0,0,0,.26)!important;
+}
+
+main .tab-content .card {box-shadow: 0 .145rem .45rem rgba(0,0,0,.15)!important}
+main .tab-content .card .card-text,
+main .tab-content .card .card-text small {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main .tab-content .card .card-text small {
+    background: url(../../img/rectangle.svg) no-repeat;
+    color: #fff;
+    width: 287px;
+    height: 56px;
+    position: relative;
+    left: -16px;
+    padding-left: 20px;
+}
