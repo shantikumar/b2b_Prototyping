@@ -281,3 +281,9 @@ a {
     border-radius: 0;
     border: none;
 }
+
+
+/* All inner pages Footer */
+footer ul li{
+    font-size: 12px;
+}
