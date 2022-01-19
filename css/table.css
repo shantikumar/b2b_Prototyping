@@ -1,0 +1,104 @@
+
+/* table overall style */
+.table-expand .p-datatable {
+    table-layout: fixed;
+}
+.p-datatable .p-datatable-tbody>tr>td {
+    color: #000000;
+    opacity: 1;
+}
+
+.p-datatable .p-datatable-tbody>tr>td a {
+    font-weight: 700;
+}
+
+/* Status */
+.customer-badge.status-unqualified {
+    background-color: #F5DBD9;
+    color: #AC0C00;
+}
+.customer-badge.status-proposal {
+    background-color: #FEECB5;
+    color: #7D5F00;
+}
+.customer-badge.status-new {
+    background-color: #CFE2FF;
+    color: #084298;
+}
+.customer-badge.status-qualified {
+    background-color: #DFF0D0;
+    color: #418B00;
+}
+.customer-badge.status-negotiation {
+    background-color: #E2E3E5;
+    color: rgba(0, 0, 0, .7);
+}
+
+/* header with export and search */
+.table-expand .p-datatable .p-datatable-header {
+    background: none;
+    border: none;
+}
+.table-expand .p-datatable .p-datatable-header .p-d-flex.ng-star-inserted .p-input-icon-left i.pi-search {
+    left: 1rem;
+}
+.table-expand .p-datatable .p-datatable-header .p-d-flex.ng-star-inserted .p-input-icon-left .p-inputtext {
+    /* flex-direction: row-reverse; */
+    border-radius: 30px;
+    padding: 8px 16px 8px 36px;
+    width: 380px;
+}
+
+span[class^="customer-"],
+span[class^="order-"] {
+    text-transform: capitalize;
+    padding: 6px 12px;
+}
+
+.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
+    width: 53%;
+    margin: 0 auto;
+    position: relative;
+    top: -28px;
+    padding: 8px 16px 8px !important;
+}
+.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-thead tr>th {
+    padding: 1rem 0 0;
+    background: none;
+    font-weight: normal;
+    color: #000000;
+    opacity: .5;
+    border-bottom: 0;
+}
+
+.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td {
+    border: none;
+    padding: 10px 0 0 0;
+}
+
+
+/* Pagination */
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight,
+.p-paginator .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+    border-radius: 30px;
+    border: 1px solid #C7D2FE;
+    background-color: #EEF2FF;
+}
+
+.p-paginator .p-dropdown {
+    display: flex;
+    align-items: center;
+}
+.p-dropdown .p-dropdown-trigger {
+    background: transparent;
+    color: #495057;
+    width: 2.357rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.p-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
