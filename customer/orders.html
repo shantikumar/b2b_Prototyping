@@ -31,7 +31,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treeselect/treeselect.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treetable/treetable.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/primeicons@4.1.0/primeicons.css" rel="stylesheet">
-  <link href="https://primefaces.org/primeng/showcase/styles.03ed13e8f2166dca.css" rel="stylesheet">
+  <link href="../css/primeNGstyles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/themes/saga-blue/theme.min.css" rel="stylesheet">
   
   
@@ -124,7 +124,7 @@
 
   <div class="container-xxl">
     <main class=" mt-4">
-      <p class="display-5">Orders</p>
+      <p class="display-6">Orders</p>
       <div class="table-expand">
         <p-table datakey="name" responsivelayout="scroll" class="p-element">
           <div id="pr_id_36" class="p-datatable p-component p-datatable-responsive-scroll">
@@ -155,7 +155,6 @@
                 <!---->
                 <thead class="p-datatable-thead">
                   <tr class="ng-star-inserted">
-                    <th style="width: 3rem;"></th>
                     <th psortablecolumn="name" class="p-element p-sortable-column" tabindex="0" role="columnheader" aria-sort="none">
                       Order No. 
                       <p-sorticon field="name" class="p-element">
@@ -193,6 +192,7 @@
                         <!---->
                       </p-sorticon>
                     </th>
+                    <th style="width: 3rem;"></th>
                   </tr>
                   <!---->
                 </thead>
@@ -201,18 +201,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-down" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#modalOrder">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Alfa Romeo F1 Team ORLEN</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-unqualified">pending resubmission</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-up" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -243,8 +243,8 @@
                                   <tr class="ng-star-inserted">
                                     <td>3</td>
                                     <td>Yas Marina Circuit</td>
-                                    <td><a href="">Download invoice</a></td>
                                     <td><span class="customer-badge status-unqualified">Unpaid</span></td>
+                                    <td><a href=""><i class="pi pi-download me-2"></i>Download invoice</a></td>
                                   </tr>
                                   <!---->
                                   <!---->
@@ -273,18 +273,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Red Bull Racing</td>
                     <td>$121,756.00</td>
                     <td><span class="customer-badge status-proposal">Pending Approval</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-down" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -292,18 +292,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Scuderia AlphaTauri</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-new">Approved</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -311,18 +311,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Scuderia Ferrari</td>
                     <td>$156.00</td>
                     <td><span class="customer-badge status-qualified">Paid</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -330,18 +330,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Williams Racing</td>
                     <td>$6960.00</td>
                     <td><span class="customer-badge status-renewal">Invoiced</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -349,18 +349,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Mercedes-AMG Petronas Formula One Team</td>
                     <td>$13,286.00</td>
                     <td><span class="customer-badge status-negotiation">Cancelled</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -368,18 +368,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Alpine F1 Team</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-unqualified">pending resubmission</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -387,18 +387,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Alfa Romeo F1 Team ORLEN</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-qualified">Paid</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -406,18 +406,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Alpine F1 Team</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-unqualified">pending resubmission</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->
@@ -425,18 +425,18 @@
                   <!---->
                   <!---->
                   <tr class="ng-star-inserted">
-                    <td>
-                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
-                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
-                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
-                      </button>
-                    </td>
                     <td><a href="">18130662</a></td>
                     <td>19-09-2021</td>
                     <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                     <td>Uralkali Haas F1 Team</td>
                     <td>$12,756.00</td>
                     <td><span class="customer-badge status-unqualified">pending resubmission</span></td>
+                    <td>
+                      <button type="button" pbutton="" pripple="" class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain">
+                        <span class="p-button-icon p-button-icon-left pi pi-chevron-right" aria-hidden="true"></span>
+                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                      </button>
+                    </td>
                   </tr>
                   <!---->
                   <!---->

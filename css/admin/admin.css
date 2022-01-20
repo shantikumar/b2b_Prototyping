@@ -23,6 +23,7 @@
     align-items: center;
     gap: 10px;
     padding: 8px;
+    text-decoration: none;
 }
 .side-nav .list-group-item a.active,
 .side-nav .list-group-item a:hover {
@@ -43,14 +44,18 @@
 
 
 
+.p-datatable .p-datatable-thead>tr>th:nth-child(3),
 .p-datatable .p-datatable-thead>tr>th:nth-child(4),
-.p-datatable .p-datatable-thead>tr>th:nth-child(5),
-.p-datatable .p-datatable-tbody>tr>td:nth-child(4),
-.p-datatable .p-datatable-tbody>tr>td:nth-child(5) {
-    width: 230px;
-    overflow: hidden;
+.p-datatable .p-datatable-tbody>tr>td:nth-child(3),
+.p-datatable .p-datatable-tbody>tr>td:nth-child(4) {
+    width: 252.5px;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    display: inline-block;
-    min-height: 62px;
+    display: inline-block; */
+}
+
+.p-datatable .p-datatable-tbody>tr>td:nth-child(3),
+.p-datatable .p-datatable-tbody>tr>td:nth-child(4) {
+    height: 71px;
 }
