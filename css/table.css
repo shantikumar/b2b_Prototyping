@@ -1,14 +1,13 @@
 
 /* table overall style */
-.table-expand .p-datatable {
+.table-wrapper table {
     table-layout: fixed;
 }
-.p-datatable .p-datatable-tbody>tr>td {
+.table-wrapper table>tbody>tr>td {
     color: #000000;
-    opacity: 1;
 }
 
-.p-datatable .p-datatable-tbody>tr>td a {
+.table-wrapper table>tbody>tr>td a {
     font-weight: 700;
 }
 
@@ -34,15 +33,23 @@
     color: rgba(0, 0, 0, .7);
 }
 
+/* icons */
+.pi {
+    font-size: 1.25rem;
+}
+
+
 /* header with export and search */
-.table-expand .p-datatable .p-datatable-header {
+.table-wrapper .p-datatable-header {
     background: none;
     border: none;
+    padding: 1rem 1rem;
 }
-.table-expand .p-datatable .p-datatable-header .p-d-flex.ng-star-inserted .p-input-icon-left i.pi-search {
+
+.table-wrapper .table-header.p-d-flex.ng-star-inserted .p-input-icon-left i.pi-search {
     left: 1rem;
 }
-.table-expand .p-datatable .p-datatable-header .p-d-flex.ng-star-inserted .p-input-icon-left .p-inputtext {
+.table-wrapper .table-header.p-d-flex.ng-star-inserted .p-input-icon-left .p-inputtext {
     /* flex-direction: row-reverse; */
     border-radius: 30px;
     padding: 8px 16px 8px 36px;
@@ -55,15 +62,15 @@ span[class^="order-"] {
     padding: 4px 8px;
 }
 
-.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
-    width: 70%;
+.table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
+    width: 900px;
     margin: 0 auto;
     position: relative;
     top: -28px;
-    left: -4%;
+    left: -5.5%;
     padding: 8px 16px 8px !important;
 }
-.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-thead tr>th {
+.table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-thead tr>th {
     padding: 1rem 0 0;
     background: none;
     font-weight: normal;
@@ -72,12 +79,12 @@ span[class^="order-"] {
     border-bottom: 0;
 }
 
-.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td {
+.table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td {
     border: none;
     padding: 10px 0 0 0;
     width: 25%;
 }
-.table-expand .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td>a {
+.table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td>a {
     font-weight: normal;    
 }
 
