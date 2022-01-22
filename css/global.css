@@ -50,6 +50,10 @@ img {
     height: 100%;
 }
 
+.w-48 {
+    width: 49%;
+}
+
 /* Flex gaps */
 .flex-gap-0 {
     gap: 0px;
@@ -106,12 +110,16 @@ a {
     color: #0038FF;
 }
 .btn-primary,
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.p-button,
+.p-button:enabled:hover {
     background-color: #0038FF;
 }
 .btn-primary,
 .btn-outline-primary,
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.p-button,
+.p-button:enabled:hover {
     border-color: #0038FF;
 }
 
