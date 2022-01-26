@@ -74,7 +74,7 @@
               <a href="" class="active"><span class="material-icons">widgets</span> Products</a>
             </li>
             <li class="list-group-item">
-              <a href=""><span class="material-icons-outlined">person_pin</span> Customer</a>
+              <a href="customer.html"><span class="material-icons-outlined">person_pin</span> Customer</a>
             </li>
             <li class="list-group-item">
               <a href="currency.html"><span class="material-icons-outlined">paid</span> Currencies</a>
@@ -165,7 +165,7 @@
         </header>
 
 
-        <main class=" mt-4">
+        <main>
           <p class="display-6">Products</p>
           <div class="table-wrapper pd-listing">
             <p-treetable class="p-element">
@@ -269,7 +269,7 @@
                                         <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
                                                 pripple=""
                                                 class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
-                                                type="button">
+                                                type="button" data-bs-toggle="modal" data-bs-target="#deleteProduct">
                                                 <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
                                                     aria-hidden="true"></span>
                                                 <!----><span class="p-button-label ng-star-inserted"
@@ -825,30 +825,31 @@
             </p-treetable>
         </div>
         </main>
+        <!--  -->
+
+        <footer class="mt-5 bg-white">
+            <div class="container-xl">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                        <li class="list-inline-item">
+                            <a href="#">Conditions of User &amp; Sale</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Notice</a>
+                        </li>
+                    </ul>
+                    <small class="">&copy; 2021-2022 B2B System. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!--  -->
+
       </div>
     </div>
     
     
     
   </div>
-
-  <footer class="mt-5 bg-white">
-    <div class="container-xl">
-        <ul class="list-inline py-3 fs-6 mb-0 text-center">
-            <li class="list-inline-item">
-                <a href="#">Conditions of User &amp; Sale</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#">Privacy Notice</a>
-            </li>
-            <li class="list-inline-item">
-                &copy; 2021-2022 B2B System. All Rights Reserved.
-            </li>
-        </ul>
-    </div>
-</footer>
-
-
 
 <!-- Add product modal -->
 <div class="modal fade" id="addProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
@@ -1198,7 +1199,7 @@
   </div>
 
 
-<!-- Duplicate Modal -->
+<!-- Duplicate - Product Modal -->
 <div class="modal fade side-open" id="modalProductDuplicate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <form class="modal-content">
@@ -1220,6 +1221,28 @@
   </div>
 </div>
 
+
+
+<!-- Delete - Product Modal -->
+<div class="modal fade" id="deleteProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content md-delete">
+        <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center flex-gap-10 fs-4" id="exampleModalLabel">
+                <span class="text-danger">Delete product</span>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deleting the product will permanently remove from lists.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">No, Keep the product </button>
+          <button type="button" class="btn btn-danger">Yes, Delete this product</button>
+        </div>
+      </div>
+    </div>
+</div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->

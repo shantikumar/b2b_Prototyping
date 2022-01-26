@@ -26,11 +26,15 @@
 .hr-nav.navbar .navbar-nav .nav-link.active {
     font-weight: 600;
 }
-.dropdown .btn-light {
+nav .dropdown .btn {
     background-color: rgba(196, 196, 196, 0.05);;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 30px;
     font-size: 14px;
+    padding: 6px 11px;
+}
+.dropdown .btn .material-icons {
+    font-size: 24px;
 }
 .only-icon a::after {display: none;}
 .icon-16 {

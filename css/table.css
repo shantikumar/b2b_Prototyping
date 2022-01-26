@@ -3,6 +3,9 @@
 .table-wrapper table {
     table-layout: fixed;
 }
+.table-wrapper table>tbody>tr {
+    vertical-align: middle;
+}
 .table-wrapper table>tbody>tr>td {
     color: #000000;
 }
@@ -11,28 +14,49 @@
     font-weight: 700;
 }
 
+.table-wrapper table>tbody>tr>td.not-found {
+    width: 100% !important;
+}
+
+
 /* Status */
-.customer-badge.status-unqualified {
-    background-color: #F5DBD9;
+.badge {
+    font-size: 12px;
+}
+.customer-badge.status-unqualified,
+.modal-body .badge.bg-danger {
+    background-color: #F5DBD9 !important;
     color: #AC0C00;
 }
-.customer-badge.status-proposal {
-    background-color: #FEECB5;
+.customer-badge.status-proposal,
+.modal-body .badge.bg-warning {
+    background-color: #FEECB5 !important;
     color: #7D5F00;
 }
-.customer-badge.status-new {
-    background-color: #CFE2FF;
+.customer-badge.status-new,
+.modal-body .badge.bg-info {
+    background-color: #CFE2FF !important;
     color: #084298;
 }
-.customer-badge.status-qualified {
-    background-color: #DFF0D0;
+.customer-badge.status-qualified,
+.modal-body .badge.bg-success {
+    background-color: #DFF0D0 !important;
     color: #418B00;
 }
 .customer-badge.status-negotiation {
-    background-color: #E2E3E5;
+    background-color: #E2E3E5 !important;
     color: rgba(0, 0, 0, .7);
 }
-
+.customer-badge.status-renewal,
+.modal-body .badge.bg-light {
+    background-color: #eccfff !important;
+    color: #694382;
+}
+.customer-badge.status-negotiation,
+.modal-body .badge.bg-secondary {
+    background-color: #E2E3E5 !important;
+    color: rgba(0, 0, 0, .7);
+}
 /* icons */
 .pi {
     font-size: 1.25rem;
@@ -62,11 +86,19 @@ span[class^="order-"] {
     padding: 4px 8px;
 }
 
-.table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
+.table-wrapper.cm-listing .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
     width: 900px;
     margin: 0 auto;
     position: relative;
-    top: -28px;
+     top: -25px;
+    /*left: -5.5%; */
+    padding: 8px 16px 8px !important;
+}
+.table-wrapper.ct-table-listing .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
     left: -5.5%;
     padding: 8px 16px 8px !important;
 }
@@ -87,6 +119,8 @@ span[class^="order-"] {
 .table-wrapper .p-datatable .p-element.p-datatable-tbody .ng-star-inserted>td>.p-p-3 .p-datatable-tbody tr>td>a {
     font-weight: normal;    
 }
+
+
 
 /* Currency listing */
 .table-wrapper.cry-listing .p-component table>tbody>tr>td:nth-child(1){
@@ -137,7 +171,7 @@ span[class^="order-"] {
     border-top: 1px solid #dee2e6;
 }
 
-/* admin order */
+/* order listing */
 .table-wrapper.cm-listing .p-component table>thead>tr>th:nth-child(1),
 .table-wrapper.cm-listing .p-component table>tbody>tr>td:nth-child(1) {
     width: 146px;
@@ -157,6 +191,7 @@ span[class^="order-"] {
     width: 150px;
 }
 
+/* Order listing - Child table */
 
 
 /* product listing */
@@ -177,7 +212,149 @@ span[class^="order-"] {
     width: 150px;
 }
 
+/* events listings */
+.table-wrapper.ev-listing .p-component table>thead>tr>th:nth-child(2),
+.table-wrapper.ev-listing .p-component table>tbody>tr>td:nth-child(2) {
+    width: 350px;
+}
+.table-wrapper.ev-listing .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.ev-listing .p-component table>tbody>tr>td:nth-child(3) {
+    width: 170px;
+}
+.table-wrapper.ev-listing .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.ev-listing .p-component table>tbody>tr>td:nth-child(4) {
+    width: 300px;
+}
+.table-wrapper.ev-listing .p-component table>tbody>tr>td>img {
+    width: 50px;
+    display: inline-flex;
+}
 
+.table-wrapper.ev-listing .p-component table>tbody>tr>td.ev-alert {
+    padding: 0 1rem;
+}
+.table-wrapper.ev-listing .p-component table>tbody>tr>td.ev-alert .alert {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-width: 0;
+}
+
+
+
+/* customer listing */
+.table-wrapper.cmt-listing .p-component table>thead>tr>th:nth-child(1),
+.table-wrapper.cmt-listing .p-component table>tbody>tr>td:nth-child(1) {
+    width: 25%;
+}
+.table-wrapper.cmt-listing .p-component table>thead>tr>th:nth-child(2),
+.table-wrapper.cmt-listing .p-component table>tbody>tr>td:nth-child(2) {
+    width: 30%;
+}
+.table-wrapper.cmt-listing .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.cmt-listing .p-component table>tbody>tr>td:nth-child(3) {
+    width: 20%;
+}
+.table-wrapper.cmt-listing .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.cmt-listing .p-component table>tbody>tr>td:nth-child(4) {
+    width: 15%;
+}
+
+/* events modal */
+.table-wrapper.ev-modal-time-period .p-component table,
+.table-wrapper.ev-modal-products .p-component table,
+.table-wrapper.ev-modal-pricing-rules .p-component table {
+    width: 100%;
+}
+.table-wrapper.ev-modal-time-period .p-component table>thead>tr>th,
+.table-wrapper.ev-modal-time-period .p-component table>tbody>tr>td,
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th,
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td,
+.table-wrapper.ev-modal-pricing-rules .p-component table>thead>tr>th,
+.table-wrapper.ev-modal-pricing-rules .p-component table>tbody>tr>td {
+    flex: none;
+}
+
+.table-wrapper.ev-modal-time-period div.p-paginator-bottom,
+.table-wrapper.ev-modal-products div.p-paginator-bottom,
+.table-wrapper.ev-modal-pricing-rules div.p-paginator-bottom {
+    justify-content: start;
+    border: none;
+}
+.table-wrapper.ev-modal-time-period div.p-paginator-bottom .p-paginator-current,
+.table-wrapper.ev-modal-products div.p-paginator-bottom .p-paginator-current,
+.table-wrapper.ev-modal-pricing-rules div.p-paginator-bottom .p-paginator-current {
+    padding-left: 0;
+    cursor: initial;
+}
+
+/* modal - time period  (add+edit form) */
+.table-wrapper.ev-modal-time-period .p-component table>thead>tr>th:nth-child(1),
+.table-wrapper.ev-modal-time-period .p-component table>tbody>tr>td:nth-child(1) {
+    width: 200px;
+}
+.table-wrapper.ev-modal-time-period .p-component table>thead>tr>th:nth-child(2),
+.table-wrapper.ev-modal-time-period .p-component table>tbody>tr>td:nth-child(2) {
+    width: 326px;
+}
+
+.table-wrapper.ev-modal-time-period .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.ev-modal-time-period .p-component table>tbody>tr>td:nth-child(3) {
+    width: 171px;
+}
+.table-wrapper.ev-modal-time-period .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.ev-modal-time-period .p-component table>tbody>tr>td:nth-child(4) {
+    width: 61px;
+}
+
+/* modal - products (add+edit form) */
+
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(1),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(1),
+.table-wrapper.ev-modal-pricing-rules .p-component table>thead>tr>th:nth-child(1),
+.table-wrapper.ev-modal-pricing-rules .p-component table>tbody>tr>td:nth-child(1) {
+    width: 48px;
+}
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(2),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(2) {
+    width: 470px;
+}
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(3) {
+    width: 160px;
+}
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(4),
+.table-wrapper.ev-modal-pricing-rules .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.ev-modal-pricing-rules .p-component table>tbody>tr>td:nth-child(4) {
+    width: 80px;
+}
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(3),
+.table-wrapper.ev-modal-products .p-component table>thead>tr>th:nth-child(4),
+.table-wrapper.ev-modal-products .p-component table>tbody>tr>td:nth-child(4) {
+    justify-content: center;
+}
+
+/* modal - pricing rules */
+
+.table-wrapper.ev-modal-pricing-rules .p-component table>thead>tr>th:nth-child(2),
+.table-wrapper.ev-modal-pricing-rules .p-component table>tbody>tr>td:nth-child(2) {
+    width: 472px;
+}
+.table-wrapper.ev-modal-pricing-rules .p-component table>thead>tr>th:nth-child(3),
+.table-wrapper.ev-modal-pricing-rules .p-component table>tbody>tr>td:nth-child(3) {
+    width: 158px;
+}
+
+
+.inv-cart-body .table thead th {
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+.inv-cart-body .table tbody {
+    border: inherit;
+}
 
 
 /* Pagination */

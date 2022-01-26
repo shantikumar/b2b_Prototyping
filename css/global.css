@@ -2,7 +2,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -71,10 +70,10 @@ img {
     gap: 30px;
 }
 
-.form-control:disabled,
+/* .form-control:disabled,
 .form-control[readonly] {
     opacity: .5;
-}
+} */
 
 
 .was-validated .filled-text input.form-control,
@@ -106,13 +105,15 @@ img {
 }
 /* Buttons */
 .btn-outline-primary,
-a {
+a,
+.nav-pills .show>.nav-link {
     color: #0038FF;
 }
 .btn-primary,
 .btn-outline-primary:hover,
 .p-button,
-.p-button:enabled:hover {
+.p-button:enabled:hover,
+.nav-pills .nav-link.active {
     background-color: #0038FF;
 }
 .btn-primary,
@@ -123,6 +124,15 @@ a {
     border-color: #0038FF;
 }
 
+
+/* images */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 
 /* Tables */
 
@@ -146,7 +156,25 @@ a {
 }
 
 
+/* Dropdown menu */
+.dropdown-menu {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border: none;
+}
+
+.dropdown-divider {
+    opacity: 0.1;
+}
+
 /* -- Input styles ---------------------------------- */
+.search-rounded .input-group-text,
+.search-rounded.input-group>.form-control {
+    border-radius: 50rem;
+}
+.search-rounded.input-group>.form-control {
+    border-width: 1px 1px 1px 0;
+}
+
 input:disabled,
 .btn.disabled {
     cursor: not-allowed;
@@ -286,6 +314,7 @@ input:disabled,
 }
 
 
+
 /* Modals */
 .modal.side-open {
     right: 0px !important;
@@ -301,7 +330,132 @@ input:disabled,
     border-radius: 0;
     border: none;
 }
+.modal .modal-content.md-delete .modal-header {
+    border: none;
+}
 
+
+/* Conversation history */
+.msg-conv-container .card.card-body{
+    position: absolute;
+    right: 20px;
+    width: 600px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    height: 280px;
+    overflow-y: scroll;
+}
+div[class^="msg-from-"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 300px;
+    
+}
+div[class^="msg-from-"] .msg-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: 500;
+    gap: 40px;
+    color: rgb(0 0 0 / 40%);
+}
+div[class^="msg-from-"] p {
+    margin: 5px 0 0;
+    padding: 18px 26px;
+    display: inline-block;
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+}
+.msg-from-them {
+    align-self: flex-start;
+}
+.msg-from-them p {
+    background-color: rgb(13 110 253 / 21%);
+    border-radius: 0 30px 30px;
+}
+.msg-from-me {
+    align-self: flex-end;
+}
+.msg-from-me p {
+    background-color: rgb(0 0 0 / 9%);
+    border-radius: 30px 30px 0;
+}
+
+/* div[class^="msg-from-"] h6 {
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+ */
+
+/* div[class^="msg-from-"] p {
+    border-radius: 1.15rem;
+    line-height: 1.25;
+    max-width: 75%;
+    padding: 0.5rem 0.875rem;
+    position: relative;
+    word-wrap: break-word;
+} */
+/* .msg-from-them p::before,
+.msg-from-them p::after {
+    bottom: -0.1rem;
+    content: "";
+    height: 1rem;
+    position: absolute;
+} */
+/* div[class^="msg-from-"] p.from-them {
+    align-items: flex-start;
+    background-color: #EAF4FF;
+    color: #000;
+}
+div[class^="msg-from-"] p.from-them {
+    border-bottom-right-radius: 0.8rem 0.7rem;
+    border-left: 1rem solid #EAF4FF;
+    transform: translate(0, -0.1rem);
+}
+div[class^="msg-from-"] p.from-me {
+    align-self: flex-end;
+    background-color: var(--primary);
+    color: #fff;
+}
+p[class^="from-"] {
+    margin: 0.5rem 0;
+    width: fit-content;
+    font-size: 1.5rem;
+} */
+
+/* step wizards */
+.od-step-wiz {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+}
+.od-step-wiz .card-body>div {
+    position: relative;
+}
+.od-step-wiz .card-body>div.filled {
+    color: #00b330 !important;
+    font-weight: 600;
+}
+.od-step-wiz .card-body>div.filled::after {
+    background-color: #00b330 !important;
+}
+.od-step-wiz .card-body>div::after {
+    background-color: rgb(0 0 0 / 10%);
+    content: "";
+    height: 4px;
+    display: block;
+    position: absolute;
+    width: 190px;
+    top: 12px;
+    left: 110%;
+    border-radius: 50rem;
+}
+.od-step-wiz .card-body>div:last-child::after {
+    display: none;
+}
 
 /* All inner pages Footer */
 footer ul li{

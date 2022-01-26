@@ -74,7 +74,7 @@
               <a href="products.html"><span class="material-icons">widgets</span> Products</a>
             </li>
             <li class="list-group-item">
-              <a href=""><span class="material-icons-outlined">person_pin</span> Customer</a>
+              <a href="customer.html"><span class="material-icons-outlined">person_pin</span> Customer</a>
             </li>
             <li class="list-group-item">
               <a href="currency.html"><span class="material-icons-outlined">paid</span> Currencies</a>
@@ -163,47 +163,297 @@
             </div>
           </nav>
         </header>
+        <!--  -->
 
-
-        <main class=" mt-4">
+        <main>
           <p class="display-6">Events</p>
-          <div class="table-wrapper pd-listing">
-            <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Event</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Venue / Circuit</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                        <div class="e-img">
-                            <img src="../img/bahrain.jpg">
+          <div class="table-wrapper ev-listing">
+
+            <p-table datakey="name" responsivelayout="scroll" class="p-element">
+                <div id="pr_id_46" class="p-datatable p-component p-datatable-responsive-scroll">
+                    <!---->
+                    <!---->
+                    <div class="p-datatable-header ng-star-inserted">
+                        <div class="table-header p-d-flex ng-star-inserted">
+                            <span _ngcontent-lvs-c133="" class="p-input-icon-left">
+                                <i _ngcontent-lvs-c133="" class="pi pi-search"></i>
+                                <input _ngcontent-lvs-c133="" pinputtext="" type="text" placeholder="Search for event..." class="p-inputtext p-component p-element">
+                            </span>
+                            <button _ngcontent-khw-c151="" pbutton="" pripple="" label="New" icon="pi pi-plus" class="p-element p-ripple p-button-rounded p-mr-2 p-button p-component ng-star-inserted p-ml-auto" data-bs-toggle="modal" data-bs-target="#addEvent">
+                                <span class="p-button-icon p-button-icon-left pi pi-plus" aria-hidden="true"></span>
+                                <span class="p-button-label">Add New</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file" ptooltip="CSV" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file-excel" ptooltip="XLS" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file-excel" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file-pdf" ptooltip="PDF" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file-pdf" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                          
                         </div>
-                    </th>
-                    <td>Gulf Air Bahrain Grand Prix</td>
-                    <td>18 - 20 Mar 2022</td>
-                    <td>Sakhir, Bahrain International Circuit</td>
-                    <td>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                            <label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
-                        </div>
-                    </td>
-                    <td>
-                        <a href=""><span class="material-icons-outlined">edit</span></a>
-                        <a href=""><span class="material-icons-outlined">request_quote</span></a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        <!---->
+                      </div>
+                    <!---->
+                    <div class="p-datatable-wrapper">
+                        <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_46-table">
+                            <!---->
+                            <thead class="p-datatable-thead">
+                                <tr class="ng-star-inserted">
+                                    
+                                    <th></th>
+                                    <th psortablecolumn="name" class="p-element p-sortable-column" tabindex="0" role="columnheader"
+                                        aria-sort="none">Event <p-sorticon field="name" class="p-element"><i
+                                                class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                            <!---->
+                                        </p-sorticon>
+                                    </th>
+                                    
+                                    <th psortablecolumn="price" class="p-element p-sortable-column" tabindex="0" role="columnheader"
+                                        aria-sort="none">Date <p-sorticon field="price" class="p-element"><i
+                                                class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                            <!---->
+                                        </p-sorticon>
+                                    </th>
+                                    <th psortablecolumn="category" class="p-element p-sortable-column" tabindex="0"
+                                        role="columnheader" aria-sort="none">Venue/Circuit 
+                                    </th>
+                                    <th psortablecolumn="category" class="p-element p-sortable-column" tabindex="0"
+                                        role="columnheader" aria-sort="none">Status 
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <!---->
+                            </thead>
+                            <!---->
+                            <tbody class="p-element p-datatable-tbody">
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td><img width="100px" class="shadow-4" src="../img/bahrain.jpg"
+                                        alt="Bahrain International Circuit"></td>
+                                    <td><strong class="fs-5">Gulf Air Bahrain Grand Prix</strong></td>
+                                    <td>18 - 20 Mar 2022</td>
+                                    <td>Sakhir, Bahrain International Circuit</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_1" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked_1">Active</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#editPricingRule">
+                                                <!----><span class="pi pi-dollar p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#editEvent">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only" type="button" disabled>
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td><img width="100px" class="shadow-4" src="https://images.motorsportstats.com/large/venueProfilePicture/venueProfilePicture-eb98469f-b938-4f07-abfa-17ec7b796d35.png"
+                                        alt="Singapore Grand Prix"></td>
+                                    <td><strong class="fs-5">Singapore Grand Prix</strong></td>
+                                    <td>30 Sep - 02 Oct 2022</td>
+                                    <td>Marina Bay, Marina Bay Street Circuit</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_2">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked_2">Draft</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#addPricingRule">
+                                                <!----><span class="pi pi-dollar p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#modalProductDuplicate">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only" type="button" data-bs-toggle="modal" data-bs-target="#deleteEvent">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <tr class="ng-star-inserted">
+                                    <td colspan="6" class="ev-alert">
+                                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                            <strong>Singapore Grand Prix</strong> is ready now to go live. Set the status as <strong>"Active"</strong>.
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td><img width="100px" class="shadow-4" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Circuit_of_the_Americas_logo.svg"
+                                        alt="Aramco United States Grand Prix"></td>
+                                    <td><strong class="fs-5">Aramco United States Grand Prix</strong></td>
+                                    <td>21 - 23 Oct 2022</td>
+                                    <td>Austin, Circuit Of The Americas</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_3">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked_3">Draft</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button">
+                                                <!----><span class="pi pi-dollar p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#modalProductDuplicate">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only" type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td><img width="100px" class="shadow-4" src="https://www.casabayvillas.com/wp-content/uploads/2019/08/grandprix_mexico_02.jpg"
+                                        alt="Gran Premio De La Ciudad De México"></td>
+                                    <td><strong class="fs-5">Gran Premio De La Ciudad De México</strong></td>
+                                    <td>28 - 30 Oct 2022</td>
+                                    <td>Mexico, Autodromo Hermanos Rodriguez</td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked_4">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked_4">Draft</label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button">
+                                                <!----><span class="pi pi-dollar p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2" type="button" data-bs-toggle="modal" data-bs-target="#modalProductDuplicate">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only" type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <tr class="ng-star-inserted">
+                                    <td colspan="6" class="ev-alert">
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                            <strong>Gran Premio De La Ciudad De México</strong> pricing rules are yet to complete. <a href="">Update now</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                            </tbody>
+                            <!---->
+                        </table>
+                        <!---->
+                        <!---->
+                    </div>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                </div>
+            </p-table>
+
+            <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                  <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+
         </div>
         </main>
+        <!--  -->
+
+        <footer class="mt-5 bg-white">
+            <div class="container-xl">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                        <li class="list-inline-item">
+                            <a href="#">Conditions of User &amp; Sale</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Notice</a>
+                        </li>
+                    </ul>
+                    <small class="">&copy; 2021-2022 B2B System. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!--  -->
+
       </div>
     </div>
     
@@ -211,393 +461,1276 @@
     
   </div>
 
-  <footer class="mt-5 bg-white">
-    <div class="container-xl">
-        <ul class="list-inline py-3 fs-6 mb-0 text-center">
-            <li class="list-inline-item">
-                <a href="#">Conditions of User &amp; Sale</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#">Privacy Notice</a>
-            </li>
-            <li class="list-inline-item">
-                &copy; 2021-2022 B2B System. All Rights Reserved.
-            </li>
-        </ul>
-    </div>
-</footer>
 
 
 
-<!-- Add product modal -->
-<div class="modal fade" id="addProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <form class="modal-content bg-light-grey">
-        <div class="modal-header bg-white">
-          <h3 class="modal-title" id="addProductLabel">New product</h3>
-          <div class="ml-auto">
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary">Save</button>
-          </div>
-        </div>
-        <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="img-preview-container bg-white p-3 rounded-3 mb-3 shadow-sm">
-                                   <div class="mb-3">
-                                        <label for="formFile" class="form-label">Product Image</label>
-                                        <input class="form-control" type="file" id="formFile">
-                                    </div>
-                                    <div class="img-preview d-flex align-items-start justify-content-start">
-                                        <div class="card mx-2 my-2">
-                                            <div class="img-wrapper">
-                                                <img src="../img/products/redwine.jpeg" class="card-img-top">
-                                            </div>
-                                            <div class="card-body d-inline-flex">
-                                                <p class="card-text text-truncate m-0">Some quick example text</p>
-                                                <span class="card-text">.jpg</span>
-                                            </div>
-                                            <div class="card-footer">
-                                                <small>358 KB</small>
-                                            </div>
-                                            <div class="remove position-absolute">
-                                                <button type="button" class="btn-close" aria-label="Close"></button>
-                                            </div>
-                                        </div>
-                                        <div class="card mx-2 my-2">
-                                            <div class="img-wrapper">
-                                                <img src="../img/products/redwine.jpeg" class="card-img-top">
-                                            </div>
-                                            <div class="card-body d-inline-flex">
-                                                <p class="card-text text-truncate m-0">Some quick example text</p>
-                                                <span class="card-text">.jpg</span>
-                                            </div>
-                                            <div class="card-footer">
-                                                <small>358 KB</small>
-                                            </div>
-                                            <div class="remove position-absolute">
-                                                <button type="button" class="btn-close" aria-label="Close"></button>
-                                            </div>
-                                        </div>
-                                        <div class="card mx-2 my-2">
-                                            <div class="img-wrapper">
-                                                <img src="../img/products/redwine.jpeg" class="card-img-top">
-                                            </div>
-                                            <div class="card-body d-inline-flex">
-                                                <p class="card-text text-truncate m-0">Some quick example text</p>
-                                                <span class="card-text">.jpg</span>
-                                            </div>
-                                            <div class="card-footer">
-                                                <small>358 KB</small>
-                                            </div>
-                                            <div class="remove position-absolute">
-                                                <button type="button" class="btn-close" aria-label="Close"></button>
-                                            </div>
-                                        </div>
-                                    </div>
+<!-- Add event Modal -->
+<div class="modal fade side-open" id="addEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title ps-3" id="modalOrderLabel">New Event</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <ul class="nav nav-pills mb-5 ev-create" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill active" id="pills-genInfo-tab" data-bs-toggle="pill" data-bs-target="#pills-genInfo" type="button" role="tab" aria-controls="pills-genInfo" aria-selected="false">1. General Information</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill" id="pills-time-tab" data-bs-toggle="pill" data-bs-target="#pills-time" type="button" role="tab" aria-controls="pills-time" aria-selected="true">2. Time Periods</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill" id="pills-product-tab" data-bs-toggle="pill" data-bs-target="#pills-product" type="button" role="tab" aria-controls="pills-product" aria-selected="false">3. Products</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-genInfo" role="tabpanel" aria-labelledby="pills-genInfo-tab">
+                        <div class="img-preview-container">
+                            <div class="d-flex align-items-center justify-content-start flex-gap-20">
+                                <div class="ev-img-placeholder">
+                                    <!-- <img src="../img/img-placeholder.svg" class="img-thumbnail"> -->
+                                    <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x400</text></svg>
                                 </div>
-                                <!--  -->
-                                <div class="img-preview-container mh-1 bg-white p-3 rounded-3 shadow-sm">
-                                    <div class="mb-3">
-                                         <label for="formFile" class="form-label">Thumbnail Image (290x300)</label>
-                                         <input class="form-control" type="file" id="formFile">
-                                     </div>
-                                     <div class="img-preview d-flex align-items-start justify-content-start">
-                                         <div class="card mx-2 my-2">
-                                             <div class="img-wrapper">
-                                                 <img src="../img/products/redwine.jpeg" class="card-img-top">
-                                             </div>
-                                             <div class="card-body d-inline-flex">
-                                                 <p class="card-text text-truncate m-0">Some quick example text</p>
-                                                 <span class="card-text">.jpg</span>
-                                             </div>
-                                             <div class="card-footer">
-                                                 <small>358 KB</small>
-                                             </div>
-                                             <div class="remove position-absolute">
-                                                 <button type="button" class="btn-close" aria-label="Close"></button>
-                                             </div>
-                                         </div>
-                                     </div>
+                                <div class="w-100">
+                                    <input class="form-control" type="file" id="formFile">
+                                    <small for="formFile" class="form-label">Max size of 400 (width) x 400 (height) pixels</small>
                                 </div>
-                                <!--  -->
                             </div>
-                            <div class="col-lg-8">
-                                <div class="bg-white p-3 rounded-3 mb-3 shadow-sm">
-                                    <div class="form-floating mb-4">
-                                        <input type="text" class="form-control" id="productName" placeholder="Red Wine">
-                                        <label for="productName">Product name</label>
-                                    </div>
-                                    <label for="basic-url" class="form-label">Product URL Identifier</label>
-                                    <div class="input-group mb-3">
-                                        <span class="input-group-text" id="basic-addon3">hhttps://b2bsystem/products/item/</span>
-                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" readonly>
-                                    </div>
-                                </div>
-                                <!--  -->
-                                <div class="bg-white p-3 rounded-3 shadow-sm">
-                                    <label for="descTextarea" class="form-label">Description</label>
-                                    <textarea class="form-control" id="descTextarea" rows="11"></textarea>
-                                </div>
-                                <!--  -->
-                                
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="eventName" placeholder="Event name">
+                                <label for="eventName">Event name</label>
                             </div>
                         </div>
-                        <div class="bg-white p-3 rounded-3 shadow-sm my-3">
-                            <h5>Attributes</h5>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Size</label>
+                
+                        <div class="d-flex justify-content-between">
+                            <div class="form-floating mb-3 w-48">
+                                <input type="date" class="form-control" id="eventFrom" placeholder="Event from">
+                                <label for="eventFrom">From</label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">Fabric</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                <label class="form-check-label" for="inlineCheckbox3">Rent Time</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3">
-                                <label class="form-check-label" for="inlineCheckbox4">Colour</label>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <div class="form-floating w-48 mb-3">
-                                    <input type="number" class="form-control" id="size" placeholder="Enter min Size">
-                                    <label for="size">Size</label>
-                                </div>
-                                <div class="form-floating w-48 mb-3">
-                                    <input type="number" class="form-control" id="rentTime" placeholder="Enter min Rent time">
-                                    <label for="rentTime">Rent Time</label>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="form-floating w-48 mb-3">
-                                    <input type="number" class="form-control" id="sifabricze" placeholder="Enter min Fabric">
-                                    <label for="fabric">Fabric</label>
-                                </div>
-                                <div class="form-floating w-48 mb-3">
-                                    <input type="number" class="form-control" id="colours" placeholder="Enter min Colours">
-                                    <label for="colours">Colours</label>
-                                </div>
+                            <div class="form-floating mb-3 w-48">
+                                <input type="date" class="form-control" id="eventTo" placeholder="Event to">
+                                <label for="eventTo">To</label>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div class="w-48 bg-white p-3 rounded-3 shadow-sm mb-3">
-                                <h5>Colours</h5>
-                                <div class="form-check form-switch d-flex justify-content-between p-0 mb-5">
-                                    <label class="form-check-label" for="flexSwitchCheckChecked">Does the product have variations?</label>
-                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <select class="form-select" id="colourSelect" aria-label="Colour Select" disabled>
-                                      <option selected>Choose your option</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
-                                    </select>
-                                    <label for="colourSelect">Colours</label>
-                                </div>
+                        <div class="d-flex justify-content-between flex-gap-20">
+                            <div class="form-floating mb-5 w-25">
+                                <input type="text" class="form-control" id="eventVenue" placeholder="Venue / Circuit" value="">
+                                <label for="eventVenue">Venue</label>
                             </div>
-                            <div class="w-48 bg-white p-3 rounded-3 shadow-sm mb-3">
-                                <h5>Videos</h5>
-                                <div class="form-floating mb-3">
-                                    <select class="form-select" id="videoSelect" aria-label="Video Provider" disabled>
-                                      <option selected>Choose your option</option>
-                                      <option value="1">One</option>
-                                      <option value="2">Two</option>
-                                      <option value="3">Three</option>
-                                    </select>
-                                    <label for="videoSelect">Provider</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="videlUrl" placeholder="Video URL">
-                                    <label for="videlUrl">Video URL</label>
-                                </div>
+                            <div class="form-floating mb-5 w-75">
+                                <input type="text" class="form-control" id="eventcircuit" placeholder="Venue / Circuit" value="">
+                                <label for="eventcircuit">Circuit name</label>
                             </div>
                         </div>
-                        <!--  -->
-
-                            
-                        <div class="bg-white p-3 rounded-3 shadow-sm mb-3">
-                            <h5>SEO Meta tags</h5>
-                            <div class="d-flex justify-content-between">
-                                <div class="w-25">
-                                    <div class="img-preview-container">
-                                        <div class="mb-3">
-                                            <input class="form-control" type="file" id="metaImage">
-                                        </div>
-                                        <div class="img-preview d-flex align-items-start justify-content-start">
-                                            <div class="card mx-2 my-2">
-                                                <div class="img-wrapper">
-                                                    <img src="../img/products/redwine.jpeg" class="card-img-top">
-                                                </div>
-                                                <div class="card-body d-inline-flex">
-                                                    <p class="card-text text-truncate m-0">Some quick example text</p>
-                                                    <span class="card-text">.jpg</span>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <small>358 KB</small>
-                                                </div>
-                                                <div class="remove position-absolute">
-                                                    <button type="button" class="btn-close" aria-label="Close"></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-75 ps-3">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                        <label for="floatingInput">Title</label>
-                                    </div>
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="metaDescription" style="height: 113px"></textarea>
-                                        <label for="metaDescription">Description</label>
-                                    </div>
-                                </div>
+                        <div class="mb-5">
+                            <p for="exampleFormControlInput1" class="form-label">Pricing factors</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_1" value="option1" checked>
+                                <label class="form-check-label" for="inlineCheckbox_1">Currency</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_2" value="option2" checked>
+                                <label class="form-check-label" for="inlineCheckbox_2">Time periods</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox_3">Customer category</label>
                             </div>
                         </div>
-
+                        <div class="form-floating mb-5">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Choose any option</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            </select>
+                            <label for="floatingSelect">Default currency</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox_4" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox_4">VAT Inclusive</label>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="bg-white p-3 rounded-3 shadow-sm mb-3">
+                    <!--  -->
+                    <div class="tab-pane fade" id="pills-time" role="tabpanel" aria-labelledby="pills-time-tab">
+                        <div class="tp-form">
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                  <option selected>Choose your option</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                                <label for="floatingSelect">Category</label>
+                                <input type="text" class="form-control" id="timePeriodName" placeholder="Please specify the name of the time" autofocus>
+                                <label for="timePeriodName">Time period name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect" aria-label="Select Group">
-                                  <option selected>Choose your option</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                                <label for="floatingSelect">Group</label>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Description <span class="text-muted">(Optional)</span></label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <select class="form-select" id="floatingSelect" aria-label="Select Brand">
-                                  <option selected>Choose your option</option>
-                                  <option value="1">Al Ain Water</option>
-                                </select>
-                                <label for="floatingSelect">Brand</label>
-                            </div>
-                            <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center justify-content-between">
                                 <div class="form-floating w-48 mb-3">
-                                    <select class="form-select" id="floatingSelect" aria-label="Select Unit">
-                                      <option selected>Choose your option</option>
-                                      <option value="1">Item</option>
-                                      <option value="2">Piece</option>
-                                      <option value="3">KG</option>
-                                      <option value="4">Liter</option>
-                                      <option value="5">Hour</option>
-                                    </select>
-                                    <label for="floatingSelect">Unit</label>
+                                    <input type="date" class="form-control" id="timeFrom" placeholder="Please specify the starting date">
+                                    <label for="timeFrom">From</label>
                                 </div>
                                 <div class="form-floating w-48 mb-3">
-                                    <input type="number" class="form-control" id="minUnit" placeholder="Enter min unit">
-                                    <label for="minUnit">Min. Unit</label>
+                                    <input type="date" class="form-control" id="timeTo" placeholder="Please specify the ending date">
+                                    <label for="timeTo">To</label>
                                 </div>
                             </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
                         </div>
-                        <!--  -->
-                        <div class="bg-white p-3 rounded-3 shadow-sm mb-3">
-                            <h5>Stock</h5>
-                            <div class="form-check form-switch d-flex justify-content-between p-0 mb-3">
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Outsource</label>
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <div class="table-wrapper ev-modal-time-period mt-4">
+                            <p-table _ngcontent-sxi-c106="" scrollheight="400px" class="p-element">
+                                <div id="pr_id_3"
+                                    class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div class="p-datatable-wrapper" style="height: 200px;">
+                                        <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                            <!---->
+                                            <thead class="p-datatable-thead">
+                                                <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                                    <th _ngcontent-sxi-c106="">Name</th>
+                                                    <th _ngcontent-sxi-c106="">Description</th>
+                                                    <th _ngcontent-sxi-c106="">Date</th>
+                                                    <th _ngcontent-sxi-c106=""></th>
+                                                </tr>
+                                                <!---->
+                                            </thead>
+                                            <!---->
+                                            <tbody class="p-element p-datatable-tbody">
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                                    <td _ngcontent-sxi-c106="" colspan="4" class="not-found justify-content-center">
+                                                        <strong class="py-5">No Time Periods added.</strong>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </tbody>
+                                            <!---->
+                                        </table>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </p-table>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="tab-pane fade" id="pills-product" role="tabpanel" aria-labelledby="pills-product-tab">
+                        <div class="d-flex justify-content-between flex-gap-20">
+                            <div class="input-group search-rounded mb-3">
+                                <span class="input-group-text bg-white" id="eventProductSearch_1">
+                                    <i class="material-icons-outlined text-muted">search</i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search for products to add..." aria-label="eventProductSearch" aria-describedby="eventProductSearch_1">
+                            </div>
+                            <div class="w-25">
+                                <button type="button" class="btn btn-primary">Add</button>
+                            </div>
+                        </div>
+                        <div class="table-wrapper ev-modal-products mt-4">
+                            <p-table _ngcontent-sxi-c106="" scrollheight="430px" class="p-element">
+                                <div id="pr_id_3" class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div class="p-datatable-wrapper" style="height: 430px;">
+                                        <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                            <!---->
+                                            <thead class="p-datatable-thead">
+                                                <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                                    <th _ngcontent-oki-c116="" style="width: 3rem;">
+                                                        <p-tableheadercheckbox _ngcontent-oki-c116="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box"><span class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tableheadercheckbox>
+                                                    </th>
+                                                    <th _ngcontent-sxi-c106="">Product</th>
+                                                    <th _ngcontent-sxi-c106="">Available Quantity</th>
+                                                    <th _ngcontent-sxi-c106=""></th>
+                                                </tr>
+                                                <!---->
+                                            </thead>
+                                            <!---->
+                                            <tbody class="p-element p-datatable-tbody">
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-sxi-c106="" colspan="4" class="not-found justify-content-center">
+                                                        <strong class="py-5">No products has been added.</strong>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </tbody>
+                                            <!---->
+                                        </table>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </p-table>
+                        </div>
+                    </div>
+                    <!--  -->
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save &amp; Continue</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Edit event Modal -->
+<div class="modal fade side-open" id="editEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title ps-3" id="modalOrderLabel">Edit Event</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <ul class="nav nav-pills mb-5 ev-create" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill active" id="pills-genInfo-tab_2" data-bs-toggle="pill" data-bs-target="#pills-genInfo_2" type="button" role="tab" aria-controls="pills-genInfo" aria-selected="false">1. General Information</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill" id="pills-time-tab_2" data-bs-toggle="pill" data-bs-target="#pills-time_2" type="button" role="tab" aria-controls="pills-time_2" aria-selected="true">2. Time Periods</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link border rounded-pill" id="pills-product-tab_2" data-bs-toggle="pill" data-bs-target="#pills-product_2" type="button" role="tab" aria-controls="pills-product_2" aria-selected="false">3. Products</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-genInfo_2" role="tabpanel" aria-labelledby="pills-genInfo-tab_2">
+                        <div class="img-preview-container">
+                            <div class="d-flex align-items-center justify-content-start flex-gap-20">
+                                <div class="ev-img-placeholder">
+                                    <img src="../img/bahrain.jpg" class="img-thumbnail">
+                                    <!-- <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x400</text></svg> -->
+                                </div>
+                                <div class="w-100">
+                                    <input class="form-control" type="file" id="formFile_2">
+                                    <small for="formFile_2" class="form-label">Max size of 400 (width) x 400 (height) pixels</small>
+                                </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="sku" placeholder="Enter min SKU">
-                                <label for="sku">SKU</label>
+                                <input type="text" class="form-control" id="eventName_2" placeholder="Event name" value="Gulf Air Bahrain Grand Prix">
+                                <label for="eventName">Event name</label>
+                            </div>
+                        </div>
+                
+                        <div class="d-flex justify-content-between">
+                            <div class="form-floating mb-3 w-48">
+                                <input type="date" class="form-control" id="eventFrom_2" placeholder="Event from" value="2022-03-18">
+                                <label for="eventFrom">From</label>
+                            </div>
+                            <div class="form-floating mb-3 w-48">
+                                <input type="date" class="form-control" id="eventTo_2" placeholder="Event to" value="2022-03-20">
+                                <label for="eventTo">To</label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between flex-gap-20">
+                            <div class="form-floating mb-5 w-25">
+                                <input type="text" class="form-control" id="eventVenue_1" placeholder="Venue / Circuit" value="Sakhir">
+                                <label for="eventVenue_1">Venue</label>
+                            </div>
+                            <div class="form-floating mb-5 w-75">
+                                <input type="text" class="form-control" id="eventcircuit_2" placeholder="Venue / Circuit" value="Bahrain International Circuit">
+                                <label for="eventcircuit_2">Circuit name</label>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <p for="exampleFormControlInput1" class="form-label">Pricing factors</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_11" value="option1" checked>
+                                <label class="form-check-label" for="inlineCheckbox_11">Currency</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_22" value="option2" checked>
+                                <label class="form-check-label" for="inlineCheckbox_22">Time periods</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox_33" value="option3" checked>
+                                <label class="form-check-label" for="inlineCheckbox_33">Customer category</label>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-5">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option>Choose any option</option>
+                            <option value="1">US Dollar ($)</option>
+                            <option value="2" selected>AED (Dirham)</option>
+                            <option value="3">Euro (€)</option>
+                            </select>
+                            <label for="floatingSelect">Default currency</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="vatCheckbox_4" value="option3">
+                            <label class="form-check-label" for="vatCheckbox_4">VAT Inclusive</label>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <div class="tab-pane fade" id="pills-time_2" role="tabpanel" aria-labelledby="pills-time-tab_2">
+                        <div class="tp-form">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="timePeriodName_2" placeholder="Please specify the name of the time" autofocus>
+                                <label for="timePeriodName_2">Time period name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="qty" placeholder="Enter min Quantity">
-                                <label for="qty">Quantity</label>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Description <span class="text-muted">(Optional)</span></label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="lowStock" placeholder="Enter min Low Stock Warning">
-                                <label for="lowStock">Low Stock Warning</label>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="form-floating w-48 mb-3">
+                                    <input type="date" class="form-control" id="timeFrom" placeholder="Please specify the starting date">
+                                    <label for="timeFrom">From</label>
+                                </div>
+                                <div class="form-floating w-48 mb-3">
+                                    <input type="date" class="form-control" id="timeTo" placeholder="Please specify the ending date">
+                                    <label for="timeTo">To</label>
+                                </div>
                             </div>
-                        </div>
-                        <!--  -->
-                        <div class="bg-white p-3 rounded-3 shadow-sm mb-3">
-                            <h5>Discount / Offer</h5>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="flat" value="Flat">
-                                <label class="form-check-label" for="flat">Flat</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="percentage" value="Percentage">
-                                <label class="form-check-label" for="percentage">Percentage</label>
-                            </div>
-                            <div class="form-floating mt-3">
-                                <input type="number" class="form-control" id="number" placeholder="Enter min Tax">
-                                <label for="number">Number</label>
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary">Add</button>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="bg-white p-3 rounded-3 shadow-sm mb-3">
-                            <h5>VAT &amp; Tax</h5>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="flat" value="Flat">
-                                <label class="form-check-label" for="flat">Flat</label>
+                        <div class="table-wrapper ev-modal-time-period mt-4">
+                            <p-table _ngcontent-sxi-c106="" scrollheight="260px" class="p-element">
+                                <div id="pr_id_3" class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div class="p-datatable-wrapper" style="height: 260px;">
+                                        <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                            <!---->
+                                            <thead class="p-datatable-thead">
+                                                <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                                    <th _ngcontent-sxi-c106="">Name</th>
+                                                    <th _ngcontent-sxi-c106="">Description</th>
+                                                    <th _ngcontent-sxi-c106="">Date</th>
+                                                    <th _ngcontent-sxi-c106=""></th>
+                                                </tr>
+                                                <!---->
+                                            </thead>
+                                            <!---->
+                                            <tbody class="p-element p-datatable-tbody">
+                                                <!---->
+                                                <tr _ngcontent-oki-c106="" class="ng-star-inserted">
+                                                    <td _ngcontent-oki-c106="">Early Bird</td>
+                                                    <td _ngcontent-oki-c106="">Kejonat telunt tills berynade. Bede. Reskap vanygt: dötedo</td>
+                                                    <td _ngcontent-oki-c106="">25 Mar - 27 Mar 2022</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-oki-c106="" class="ng-star-inserted">
+                                                    <td _ngcontent-oki-c106="">During Event</td>
+                                                    <td _ngcontent-oki-c106="">Kejonat telunt tills berynade. Bede. Reskap vanygt: dötedo</td>
+                                                    <td _ngcontent-oki-c106="">25 Mar - 27 Mar 2022</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-oki-c106="" class="ng-star-inserted">
+                                                    <td _ngcontent-oki-c106="">Post Event</td>
+                                                    <td _ngcontent-oki-c106="">Kejonat telunt tills berynade. Bede. Reskap vanygt: dötedo</td>
+                                                    <td _ngcontent-oki-c106="">25 Mar - 27 Mar 2022</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-oki-c106="" class="ng-star-inserted">
+                                                    <td _ngcontent-oki-c106="">Training</td>
+                                                    <td _ngcontent-oki-c106="">Kejonat telunt tills berynade. Bede. Reskap vanygt: dötedo</td>
+                                                    <td _ngcontent-oki-c106="">25 Mar - 27 Mar 2022</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </tbody>
+                                            <!---->
+                                        </table>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                    <p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted">
+                                        <div class="p-paginator-bottom p-paginator p-component ng-star-inserted">
+                                            <!----><span class="p-paginator-current ng-star-inserted">Total 4 entries</span>
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                    </p-paginator>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </p-table>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <div class="tab-pane fade" id="pills-product_2" role="tabpanel" aria-labelledby="pills-product-tab_2">
+                        <div class="d-flex justify-content-between flex-gap-20">
+                            <div class="input-group search-rounded mb-3">
+                                <span class="input-group-text bg-white" id="eventProductSearch_1">
+                                    <i class="material-icons-outlined text-muted">search</i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Search for products to add..." aria-label="eventProductSearch" aria-describedby="eventProductSearch_1">
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="percentage" value="Percentage">
-                                <label class="form-check-label" for="percentage">Percentage</label>
-                            </div>
-                            <div class="form-floating mt-3">
-                                <input type="number" class="form-control" id="tax" placeholder="Enter min Tax">
-                                <label for="tax">Tax</label>
+                            <div class="w-25">
+                                <button type="button" class="btn btn-primary">Add</button>
                             </div>
                         </div>
-                        <!--  -->
-                        <div class="bg-white p-3 rounded-3 shadow-sm my-3">
-                            <h5>Specifications</h5>
-                            <div class="mb-3">
-                                <input class="form-control" type="file" id="formFile">
-                                <label for="formFile" class="form-label">PDF Specifications</label>
-                            </div>
+                        <div class="table-wrapper ev-modal-products mt-4">
+                            <p-table _ngcontent-sxi-c106="" scrollheight="430px" class="p-element">
+                                <div id="pr_id_3" class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div class="p-datatable-wrapper" style="height: 430px;">
+                                        <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                            <!---->
+                                            <thead class="p-datatable-thead">
+                                                <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                                    <th _ngcontent-oki-c86="">
+                                                        <p-tableheadercheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box"><span class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tableheadercheckbox>
+                                                    </th>
+                                                    <th _ngcontent-sxi-c106="">Product</th>
+                                                    <th _ngcontent-sxi-c106="">Available Quantity</th>
+                                                    <th _ngcontent-sxi-c106=""></th>
+                                                </tr>
+                                                <!---->
+                                            </thead>
+                                            <!---->
+                                            <tbody class="p-element p-datatable-tbody">
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Red Wine - Dauzac Bordeaux</td>
+                                                    <td _ngcontent-oki-c106="">40</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Corona bottled beer 24 x 330ml bottles</td>
+                                                    <td _ngcontent-oki-c106="">100</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Heineken Canned Beer 24 x 330ml cans</td>
+                                                    <td _ngcontent-oki-c106="">97</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Fork Lift - 3 Ton Per Event</td>
+                                                    <td _ngcontent-oki-c106="">4</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Sea Food Crab Meat Claw</td>
+                                                    <td _ngcontent-oki-c106="">28</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Bread Arabic Brown</td>
+                                                    <td _ngcontent-oki-c106="">83</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Bread Crumbs Panko</td>
+                                                    <td _ngcontent-oki-c106="">128</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                                    <td _ngcontent-oki-c86="">
+                                                        <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                            <div class="p-checkbox p-component">
+                                                                <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                                <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                        class="p-checkbox-icon"></span></div>
+                                                            </div>
+                                                        </p-tablecheckbox>
+                                                    </td>
+                                                    <td _ngcontent-oki-c106="">Executive office swivel chair</td>
+                                                    <td _ngcontent-oki-c106="">10</td>
+                                                    <td _ngcontent-oki-c106="">
+                                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                            <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                            <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                            <!---->
+                                                            <!----><span class="p-ink"></span>
+                                                        </button></p-button>
+                                                    </td>
+                                                </tr>
+                                                <!---->
+                                                <!---->
+                                                <!---->
+                                            </tbody>
+                                            <!---->
+                                        </table>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                    <!---->
+
+                                    <!-- When selected for all option the delete will appear and pagination will get hidden -->
+                                    <!-- <div class="p-toolbar-group-left ng-star-inserted">
+                                        <button _ngcontent-oki-c116="" pbutton="" pripple="" icon="pi pi-trash" class="p-element p-button-danger p-button p-component p-button-icon-only ng-star-inserted">
+                                            <span class="p-button-icon pi pi-trash" aria-hidden="true"></span>
+                                            <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                                        </button>
+                                    </div> -->
+
+                                    <p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted">
+                                        <div class="p-paginator-bottom p-paginator p-component ng-star-inserted">
+                                            <!----><span class="p-paginator-current ng-star-inserted">Total 8 entries</span>
+                                            <!---->
+                                            <!---->
+                                        </div>
+                                        <!---->
+                                    </p-paginator>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </p-table>
                         </div>
-                        <!--  -->
                     </div>
                 </div>
-        </div>
-    </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save &amp; Continue</button>
+            </div>
+        </form>
     </div>
-  </div>
+</div>
 
 
-<!-- Duplicate Modal -->
-<div class="modal fade side-open" id="modalProductDuplicate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <form class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="modalOrderLabel">Duplicate product</h3>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="form-floating">
-            <input type="text" class="form-control" id="duplicateProduct" placeholder="Product name" value="Copy Red Wine - Dauzac Bordeaux" autofocus>
-            <label for="duplicateProduct">Product name</label>
+<!-- Add Pricing Rule Modal -->
+<div class="modal fade side-open" id="addPricingRule" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title ps-3" id="modalOrderLabel">Pricing Rules</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="d-flex justify-content-between flex-gap-20">
+                    <div class="form-floating w-100 mb-5">
+                        <select class="form-select" id="floatingSelect_22" aria-label="Floating label select example">
+                        <option selected>Choose your option</option>
+                        <option value="1">US Dollar ($)</option>
+                        <option value="2">AED (Dirham)</option>
+                        <option value="3">Euro (€)</option>
+                        </select>
+                        <label for="floatingSelect_22">Currency</label>
+                    </div>
+                    <div class="form-floating w-100">
+                        <select class="form-select" id="floatingSelect_33" aria-label="Floating label select example">
+                        <option selected>Choose your option</option>
+                        <option value="1">Training</option>
+                        <option value="2">Prevent</option>
+                        <option value="3">During Event</option>
+                        <option value="3">Post Event</option>
+                        </select>
+                        <label for="floatingSelect_33">Time period</label>
+                    </div>
+                    <div class="form-floating w-100">
+                        <select class="form-select" id="floatingSelect_44" aria-label="Floating label select example">
+                        <option selected>Choose your option</option>
+                        <option value="1">General Anchillary</option>
+                        <option value="2">Paddock Customers</option>
+                        <option value="3">Red Bull Racing</option>
+                        </select>
+                        <label for="floatingSelect_44">Category</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between flex-gap-10">
+                    <div class="input-group search-rounded flex-fill">
+                        <span class="input-group-text bg-white" id="eventProductSearch_1">
+                            <i class="material-icons-outlined text-muted">search</i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search for products to add..." aria-label="eventProductSearch" aria-describedby="eventProductSearch_1">
+                    </div>
+
+                    <button type="button" class="btn btn-primary flex-fill">Add</button>
+                
+                    <div class="dropdown only-icon flex-fill">
+                        <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center flex-gap-10" href="#">
+                                    <span class="material-icons-outlined text-muted">file_upload</span> 
+                                    <strong>Import Excel</strong>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap flex-gap-10" href="#">
+                                    <span class="material-icons-outlined text-muted">cloud_download</span> 
+                                    Download import template
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrapper ev-modal-pricing-rules mt-4">
+                    <p-table _ngcontent-sxi-c106="" scrollheight="430px" class="p-element">
+                        <div id="pr_id_3" class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <div class="p-datatable-wrapper" style="height: 430px;">
+                                <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                    <!---->
+                                    <thead class="p-datatable-thead">
+                                        <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                            <th _ngcontent-oki-c116="">
+                                                <p-tableheadercheckbox _ngcontent-oki-c116="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tableheadercheckbox>
+                                            </th>
+                                            <th _ngcontent-sxi-c106="">Product</th>
+                                            <th _ngcontent-sxi-c106="">Price</th>
+                                            <th _ngcontent-sxi-c106=""></th>
+                                        </tr>
+                                        <!---->
+                                    </thead>
+                                    <!---->
+                                    <tbody class="p-element p-datatable-tbody">
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-sxi-c106="" colspan="4" class="not-found justify-content-center">
+                                                <strong class="py-5">No products has been added.</strong>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </tbody>
+                                    <!---->
+                                </table>
+                                <!---->
+                                <!---->
+                            </div>
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </p-table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save &amp; Continue</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Edit Pricing Rule Modal -->
+<div class="modal fade side-open" id="editPricingRule" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title ps-3" id="modalOrderLabel">Pricing Rules</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="d-flex justify-content-between flex-gap-20">
+                    <div class="form-floating w-100 mb-5">
+                        <select class="form-select" id="floatingSelect_22" aria-label="Floating label select example">
+                        <option>Choose your option</option>
+                        <option value="1">US Dollar ($)</option>
+                        <option value="2" selected>AED (Dirham)</option>
+                        <option value="3">Euro (€)</option>
+                        </select>
+                        <label for="floatingSelect_22">Currency</label>
+                    </div>
+                    <div class="form-floating w-100">
+                        <select class="form-select" id="floatingSelect_33" aria-label="Floating label select example">
+                        <option>Choose your option</option>
+                        <option value="1">Training</option>
+                        <option value="2" selected>Prevent</option>
+                        <option value="3">During Event</option>
+                        <option value="3">Post Event</option>
+                        </select>
+                        <label for="floatingSelect_33">Time period</label>
+                    </div>
+                    <div class="form-floating w-100">
+                        <select class="form-select" id="floatingSelect_44" aria-label="Floating label select example">
+                        <option>Choose your option</option>
+                        <option value="1" selected>General Anchillary</option>
+                        <option value="2">Paddock Customers</option>
+                        <option value="3">Red Bull Racing</option>
+                        </select>
+                        <label for="floatingSelect_44">Category</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between flex-gap-10">
+                    <div class="input-group search-rounded flex-fill">
+                        <span class="input-group-text bg-white" id="eventProductSearch_1">
+                            <i class="material-icons-outlined text-muted">search</i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search for products to add..." aria-label="eventProductSearch" aria-describedby="eventProductSearch_1">
+                    </div>
+
+                    <button type="button" class="btn btn-primary flex-fill">Add</button>
+                
+                    <div class="dropdown only-icon flex-fill">
+                        <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-icons-outlined">more_vert</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center flex-gap-10" href="#">
+                                    <span class="material-icons-outlined text-muted">file_upload</span> 
+                                    <strong>Import Excel</strong>
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center gap flex-gap-10" href="#">
+                                    <span class="material-icons-outlined text-muted">cloud_download</span> 
+                                    Download import template
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrapper ev-modal-pricing-rules mt-4">
+                    <p-table _ngcontent-sxi-c106="" scrollheight="430px" class="p-element">
+                        <div id="pr_id_3" class="p-datatable p-component p-datatable-scrollable p-datatable-scrollable-vertical p-datatable-responsive-stack">
+                            <!---->
+                            <!---->
+                            <!---->
+                            <div class="p-datatable-wrapper" style="height: 430px;">
+                                <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_3-table">
+                                    <!---->
+                                    <thead class="p-datatable-thead">
+                                        <tr _ngcontent-sxi-c106="" class="ng-star-inserted">
+                                            <th _ngcontent-oki-c116="">
+                                                <p-tableheadercheckbox _ngcontent-oki-c116="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tableheadercheckbox>
+                                            </th>
+                                            <th _ngcontent-sxi-c106="">Product</th>
+                                            <th _ngcontent-sxi-c106="">Price</th>
+                                            <th _ngcontent-sxi-c106=""></th>
+                                        </tr>
+                                        <!---->
+                                    </thead>
+                                    <!---->
+                                    <tbody class="p-element p-datatable-tbody">
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Red Wine - Dauzac Bordeaux</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="417">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Corona bottled beer 24 x 330ml bottles</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="325">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Heineken Canned Beer 24 x 330ml cans</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="99">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Fork Lift - 3 Ton Per Event</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="550">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Sea Food Crab Meat Claw</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="145">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Bread Arabic Brown</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="45">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Bread Crumbs Panko</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="15">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Executive office swivel chair</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="1890">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Internet</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="499">
+                                            </td>
+                                            <td _ngcontent-oki-c106="">
+                                                <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button">
+                                                    <!----><span class="pi pi-trash p-button-icon ng-star-inserted" aria-hidden="true"></span>
+                                                    <!----><span class="p-button-label ng-star-inserted" aria-hidden="true">&nbsp;</span>
+                                                    <!---->
+                                                    <!----><span class="p-ink"></span>
+                                                </button></p-button>
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                        <tr _ngcontent-sxi-c106="" class="p-selectable-row ng-star-inserted">
+                                            <td _ngcontent-oki-c86="">
+                                                <p-tablecheckbox _ngcontent-oki-c86="" class="p-element">
+                                                    <div class="p-checkbox p-component">
+                                                        <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                        <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span class="p-checkbox-icon"></span></div>
+                                                    </div>
+                                                </p-tablecheckbox>
+                                            </td>
+                                            <td _ngcontent-oki-c106="">Security Guards</td>
+                                            <td _ngcontent-oki-c106="">
+                                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter price" value="1245">
+                                            </td>
+                                        </tr>
+                                        <!---->
+                                        <!---->
+                                    </tbody>
+                                    <!---->
+                                </table>
+                                <!---->
+                                <!---->
+                            </div>
+                            <!---->
+                            <!---->
+                            <p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted">
+                                <div class="p-paginator-bottom p-paginator p-component ng-star-inserted">
+                                    <!----><span class="p-paginator-current ng-star-inserted">Total 10 entries</span>
+                                    <!---->
+                                    <!---->
+                                </div>
+                                <!---->
+                            </p-paginator>
+                            <!---->
+                            <!---->
+                            <!---->
+                        </div>
+                    </p-table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save &amp; Continue</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Delete event Modal -->
+<div class="modal fade" id="deleteEvent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content md-delete">
+        <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center flex-gap-10 fs-4" id="exampleModalLabel">
+                <span class="text-danger">Delete event</span>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Deleting the event will permanently remove from lists.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">No, Keep the event </button>
+          <button type="button" class="btn btn-danger">Yes, Delete this event</button>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Save</button>
-      </div>
-    </form>
-  </div>
+    </div>
 </div>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
@@ -607,9 +1740,6 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/fesm2015/primeng-tooltip.mjs.map"></script>
 
-    <script>
-
-    </script>
 
 </body>
 

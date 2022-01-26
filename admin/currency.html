@@ -77,7 +77,7 @@
               <a href=""><span class="material-icons-outlined">person_pin</span> Customer</a>
             </li>
             <li class="list-group-item">
-              <a href="" class="active"><span class="material-icons-outlined">paid</span> Currencies</a>
+              <a href="currency.html" class="active"><span class="material-icons-outlined">paid</span> Currencies</a>
             </li>
             <li class="list-group-item">
               <a href="orders.html"><span class="material-icons-outlined">add_shopping_cart</span> Orders</a>
@@ -163,9 +163,9 @@
             </div>
           </nav>
         </header>
+        <!--  -->
 
-
-        <main class=" mt-4">
+        <main>
           <p class="display-6 mb-1">Currencies</p>
           <p class="text-muted">All exchange rates are based on 1 USD = ?</p>
           <div class="table-wrapper cry-listing">
@@ -178,7 +178,7 @@
                                 <i _ngcontent-lvs-c133="" class="pi pi-search"></i>
                                 <input _ngcontent-lvs-c133="" pinputtext="" type="text" placeholder="Search for currency..." class="p-inputtext p-component p-element">
                             </span>
-                            <button _ngcontent-khw-c151="" pbutton="" pripple="" label="New" icon="pi pi-plus" class="p-element p-ripple p-button-rounded p-mr-2 p-button p-component ng-star-inserted p-ml-auto" data-bs-toggle="modal" data-bs-target="#addProduct">
+                            <button _ngcontent-khw-c151="" pbutton="" pripple="" label="New" icon="pi pi-plus" class="p-element p-ripple p-button-rounded p-mr-2 p-button p-component ng-star-inserted p-ml-auto" data-bs-toggle="modal" data-bs-target="#addCurrency">
                                 <span class="p-button-icon p-button-icon-left pi pi-plus" aria-hidden="true"></span>
                                 <span class="p-button-label">Add New</span>
                             </button>
@@ -258,7 +258,7 @@
                                     <td>
                                         <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
                                             <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
-                                                type="button" style="margin-right: 0.5em;">
+                                                type="button" data-bs-toggle="modal" data-bs-target="#editCurrency">
                                                 <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
                                                     aria-hidden="true"></span>
                                                 <!----><span class="p-button-label ng-star-inserted"
@@ -266,10 +266,8 @@
                                                 <!---->
                                                 <!----><span class="p-ink"></span>
                                             </button></p-button>
-                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
-                                                pripple=""
-                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
-                                                type="button">
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button" data-bs-toggle="modal" data-bs-target="#deleteCurrency">
                                                 <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
                                                     aria-hidden="true"></span>
                                                 <!----><span class="p-button-label ng-star-inserted"
@@ -724,12 +722,16 @@
                                 <!---->
                             </span>
                             <!---->
-                            <!----><button type="button" pripple=""
-                                class="p-ripple p-element p-paginator-next p-paginator-element p-link"><span
-                                    class="p-paginator-icon pi pi-angle-right"></span><span class="p-ink"></span></button><button
-                                type="button" pripple=""
-                                class="p-ripple p-element p-paginator-last p-paginator-element p-link ng-star-inserted"><span
-                                    class="p-paginator-icon pi pi-angle-double-right"></span><span class="p-ink"></span></button>
+                            <!---->
+                            <button type="button" pripple="" class="p-ripple p-element p-paginator-next p-paginator-element p-link">
+                                <span class="p-paginator-icon pi pi-angle-right"></span>
+                                <span class="p-ink"></span>
+                            </button>
+                            <button type="button" pripple=""
+                                class="p-ripple p-element p-paginator-last p-paginator-element p-link ng-star-inserted">
+                                <span class="p-paginator-icon pi pi-angle-double-right"></span>
+                                <span class="p-ink"></span>
+                            </button>
                             <!---->
                             <!---->
                             <p-dropdown styleclass="p-paginator-rpp-options"
@@ -760,7 +762,28 @@
                 </div>
             </p-treetable>
         </div>
+
+
         </main>
+        <!--  -->
+
+        <footer class="mt-5 bg-white">
+            <div class="container-xl">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                        <li class="list-inline-item">
+                            <a href="#">Conditions of User &amp; Sale</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Notice</a>
+                        </li>
+                    </ul>
+                    <small class="">&copy; 2021-2022 B2B System. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!--  -->
+        
       </div>
     </div>
     
@@ -768,35 +791,21 @@
     
   </div>
 
-  <footer class="mt-5 bg-white">
-    <div class="container-xl">
-        <ul class="list-inline py-3 fs-6 mb-0 text-center">
-            <li class="list-inline-item">
-                <a href="#">Conditions of User &amp; Sale</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#">Privacy Notice</a>
-            </li>
-            <li class="list-inline-item">
-                &copy; 2021-2022 B2B System. All Rights Reserved.
-            </li>
-        </ul>
-    </div>
-</footer>
+  
 
 
 
-<!-- Add product modal -->
-<div class="modal fade side-open" id="addProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
+<!-- Add currency modal -->
+<div class="modal fade side-open" id="addCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCurrencyLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-light-grey">
             <div class="modal-header bg-white">
-                <h3 class="modal-title" id="addProductLabel">New currency</h3>
+                <h3 class="modal-title" id="addCurrencyLabel">New currency</h3>
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="d-flex justify-content-between mb-5">
-                        <div class="form-floating w-75 me-3">
+                    <div class="d-flex justify-content-between flex-gap-10 mb-5">
+                        <div class="form-floating w-100">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                             <option selected>Choose your option</option>
                             <option value="1">One</option>
@@ -805,7 +814,7 @@
                             </select>
                             <label for="floatingSelect">Currency name</label>
                         </div>
-                        <div class="form-floating me-3">
+                        <div class="form-floating">
                             <input type="number" class="form-control" id="exchangeRate" placeholder="Exchange Rate">
                             <label for="exchangeRate">Exchange rate</label>
                         </div>
@@ -873,7 +882,7 @@
                                                 <td _ngcontent-khw-c151="">$ AUD</td>
                                                 <td _ngcontent-khw-c151="">1.38</td>
                                                 <td _ngcontent-khw-c151="">
-                                                    <button _ngcontent-khw-c151="" pbutton="" pripple="" icon="pi pi-trash" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only">
+                                                    <button _ngcontent-khw-c151="" pbutton="" pripple="" icon="pi pi-trash" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text">
                                                         <span class="p-button-icon pi pi-trash" aria-hidden="true"></span>
                                                         <span aria-hidden="true" class="p-button-label">&nbsp;</span>
                                                     </button>
@@ -881,65 +890,6 @@
                                             </tr>
                                             <!---->
                                             <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            
                                             <!---->
                                             <!---->
                                             <!---->
@@ -965,6 +915,54 @@
     </div>
 </div>
 
+<!-- Edit currency modal -->
+<div class="modal fade side-open" id="editCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCurrencyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content bg-light-grey">
+            <div class="modal-header bg-white">
+                <h3 class="modal-title" id="editCurrencyLabel">Edit currency</h3>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-between flex-gap-20 mb-3">
+                    <div class="form-floating w-75">
+                        <input type="email" class="form-control" id="editCurrencyfield" placeholder="Enter Currency name" value="United Arab Emirates Dirham" disabled>
+                        <label for="editCurrencyfield">Currency name</label>
+                    </div>
+                    <div class="form-floating w-25">
+                        <input type="number" class="form-control" id="editExchangeRate" placeholder="Exchange Rate" value="3.67">
+                        <label for="editExchangeRate">Exchange rate</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Update</button>
+              </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Delete event Modal -->
+<div class="modal fade" id="deleteCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content md-delete">
+        <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center flex-gap-10 fs-4" id="exampleModalLabel">
+                <span class="text-danger">Delete currency</span>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-reset">Deleting the currency will permanently remove from lists.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">No, Keep the currency </button>
+          <button type="button" class="btn btn-danger">Yes, Delete this currency</button>
+        </div>
+      </div>
+    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>

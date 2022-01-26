@@ -72,7 +72,7 @@
               <a href="products.html"><span class="material-icons">widgets</span> Products</a>
             </li>
             <li class="list-group-item">
-              <a href=""><span class="material-icons-outlined">person_pin</span> Customer</a>
+              <a href="customer.html"><span class="material-icons-outlined">person_pin</span> Customer</a>
             </li>
             <li class="list-group-item">
               <a href="currency.html"><span class="material-icons-outlined">paid</span> Currencies</a>
@@ -161,9 +161,9 @@
             </div>
           </nav>
         </header>
+        
 
-
-        <main class=" mt-4">
+        <main>
           <p class="display-6">Orders</p>
           <div class="table-wrapper cm-listing">
             <p-table datakey="name" responsivelayout="scroll" class="p-element">
@@ -313,7 +313,7 @@
                       <!---->
                       <!---->
                       <tr class="ng-star-inserted">
-                        <td><a href="">18130662</a></td>
+                        <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#pendingApproval">18130662</a></td>
                         <td>19-09-2021</td>
                         <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                         <td>Red Bull Racing</td>
@@ -332,7 +332,7 @@
                       <!---->
                       <!---->
                       <tr class="ng-star-inserted">
-                        <td><a href="">18130662</a></td>
+                        <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#approved">18130662</a></td>
                         <td>19-09-2021</td>
                         <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                         <td>Scuderia AlphaTauri</td>
@@ -351,7 +351,7 @@
                       <!---->
                       <!---->
                       <tr class="ng-star-inserted">
-                        <td><a href="">18130662</a></td>
+                        <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#paid">18130662</a></td>
                         <td>19-09-2021</td>
                         <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                         <td>Scuderia Ferrari</td>
@@ -370,7 +370,7 @@
                       <!---->
                       <!---->
                       <tr class="ng-star-inserted">
-                        <td><a href="">18130662</a></td>
+                        <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#invoiced">18130662</a></td>
                         <td>19-09-2021</td>
                         <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                         <td>Williams Racing</td>
@@ -390,7 +390,7 @@
                       <!---->
                       <!---->
                       <tr class="ng-star-inserted">
-                        <td><a href="">18130662</a></td>
+                        <td><a href="" type="button" data-bs-toggle="modal" data-bs-target="#cancelled">18130662</a></td>
                         <td>19-09-2021</td>
                         <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
                         <td>Mercedes-AMG Petronas Formula One Team</td>
@@ -506,6 +506,25 @@
             </p-table>
         </div>
         </main>
+        <!--  -->
+
+        <footer class="mt-5 bg-white">
+          <div class="container-xl">
+              <div class="d-flex justify-content-between align-items-center">
+                  <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                      <li class="list-inline-item">
+                          <a href="#">Conditions of User &amp; Sale</a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a href="#">Privacy Notice</a>
+                      </li>
+                  </ul>
+                  <small class="">&copy; 2021-2022 B2B System. All Rights Reserved.</small>
+              </div>
+          </div>
+      </footer>
+      <!--  -->
+
       </div>
     </div>
     
@@ -513,39 +532,1192 @@
     
   </div>
 
-  <footer class="mt-5 bg-white">
-    <div class="container-xl">
-        <ul class="list-inline py-3 fs-6 mb-0 text-center">
-            <li class="list-inline-item">
-                <a href="#">Conditions of User &amp; Sale</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#">Privacy Notice</a>
-            </li>
-            <li class="list-inline-item">
-                &copy; 2021-2022 B2B System. All Rights Reserved.
-            </li>
-        </ul>
-    </div>
-</footer>
 
 
-
-<!-- Modal -->
+<!-- View order Modal (Pending resubmission)-->
 <div class="modal fade side-open" id="modalOrder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalOrderLabel">Modal title</h5>
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-danger m-0" id="orderStatus">Pending Resubmission</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-danger m-0" id="paymentStatus">Unpaid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_3" role="button" aria-expanded="false" aria-controls="collapseConversation_3">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_3">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+
+            
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.008</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- View order Modal (Pending Approval)-->
+<div class="modal fade side-open" id="pendingApproval" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-warning m-0" id="orderStatus">Pending Approval</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-danger m-0" id="paymentStatus">Unpaid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted active"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_2" role="button" aria-expanded="false" aria-controls="collapseConversation_2">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_2">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+            
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.008</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel order</button>
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Return to customer</button>
+        <button type="button" class="btn btn-primary">Approve order</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- View order Modal (Approved)-->
+<div class="modal fade side-open" id="approved" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-info m-0" id="orderStatus">Approved</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-danger m-0" id="paymentStatus">Unpaid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_3" role="button" aria-expanded="false" aria-controls="collapseConversation_3">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_3">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <form class="w-50">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-7">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Invoice reference no.</label>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <button type="button" class="btn btn-primary">Invoice order</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- View order Modal (Paid)-->
+<div class="modal fade side-open" id="paid" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-success m-0" id="orderStatus">Paid</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-success m-0" id="paymentStatus">Paid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_4" role="button" aria-expanded="false" aria-controls="collapseConversation_4">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_4">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <form class="w-50">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-7">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Invoice reference no.</label>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <button type="button" class="btn btn-primary">Invoice order</button>
+            </div>
+          </div>
+        </form>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<!-- View order Modal (Invoiced)-->
+<div class="modal fade side-open" id="invoiced" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-light m-0" id="orderStatus">Invoiced</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-danger m-0" id="paymentStatus">Unpaid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted filled"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_5" role="button" aria-expanded="false" aria-controls="collapseConversation_5">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_5">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <form class="w-50">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-7">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Payment reference no.</label>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <button type="button" class="btn btn-primary">Complete payment order</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- View order Modal (Cancelled)-->
+<div class="modal fade side-open" id="cancelled" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title fs-3 text-dark" id="modalOrderLabel">
+          <strong>Order no. 18130662</strong>
+        </p>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div class="d-flex justify-content-between w-75">
+            <div class="w-100">
+              <label for="orderPlaced" class="form-label text-muted m-0">Order placed</label>
+              <p class="form-control-plaintext fs-5 p-0" id="orderPlaced">19-09-2021, 17:05</p>
+            </div>
+            <div class="w-100">
+              <label for="orderStatus" class="form-label text-muted d-block m-0">Order status</label>
+              <p class="badge bg-secondary m-0" id="orderStatus">Cancelled</p>
+            </div>
+            <div class="w-100">
+              <label for="paymentStatus" class="form-label d-block text-muted m-0">Payment status</label>
+              <p class="badge bg-danger m-0" id="paymentStatus">Unpaid</p>
+            </div>
+          </div>
+          <div class="">
+            <a href="" class="d-flex align-items-center flex-gap-10">
+              <span class="material-icons-outlined">file_download</span>
+              Invoice
+            </a>
+          </div>
+        </div>
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div class="card-body d-flex align-items-center justify-content-between p-4">
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">pending_actions</span> Pending Approval</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">verified</span> Approved</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">receipt</span> Invoiced</div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted"><span class="material-icons">monetization_on</span> Paid</div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Event</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Etihad Airways Abu Dhabi Grand Prix 2021</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Customer</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">Alfa Romeo F1 Team ORLEN</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Email address</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">mclarenF1A.team@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0">Name</label>
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">Yas Marina Circuit</p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label for="orderStatus" class="form-label text-muted d-block m-0">Email Address</label>
+                  <p class="form-control-plaintext p-0" id="orderStatus">F1Asales.ymc@gmail.com</p>
+                </div>
+                <div class="w-100">
+                  <label for="paymentStatus" class="form-label d-block text-muted m-0">Phone no.</label>
+                  <p class="form-control-plaintext p-0" id="paymentStatus">+91-9873-773-333</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inv-cart-container">
+          <div class="inv-cart-body">
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <h4 class="text-dark">Details</h4>
+              <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_6" role="button" aria-expanded="false" aria-controls="collapseConversation_6">
+                Order Conversation History
+              </a>
+            </div>
+            <div class="collapse msg-conv-container" id="collapseConversation_6">
+              <div class="card card-body d">
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where does it come from?</p>
+                </div>
+                <div class="msg-from-them">
+                  <div class="msg-detail">
+                    <strong>First Abu Dhabi Bank</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                </div>
+                <div class="msg-from-me">
+                  <div class="msg-detail">
+                    <strong>Yas Marina Circuit</strong>
+                    <span>01-10-2021 13:25</span>
+                  </div>
+                  <p class="from-them">Where can I get some?</p>
+                </div>
+              </div>
+            </div>
+            <table class="table table-hover mt-3">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="text-center">Days</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th class="text-center">Quantity</th>
+                  <th class="text-center">Units</th>
+                  <th>Units Price</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>19-12-2021</td>
+                  <td>20-12-2021</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$2,126.00</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">Large Double Glass Door 800 Ltrs</a>
+                  </td>
+                  <td class="text-center">2</td>
+                  <td>21-12-2021</td>
+                  <td>22-12-2021</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">1</td>
+                  <td>$2,126.00</td>
+                  <td>$8,504.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="inv-cart-footer">
+            <div class="text-end">
+              <div class="text-end pe-5">
+                <p>Sub Total: $12,756.00</p>
+                <p>Tax(18%) : $0.00</p>
+                <p>Discount: $0.00</p>
+                <h4 class="fw-bold">Total amount: $12,756.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <form class="w-50">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-7">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Payment reference no.</label>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <button type="button" class="btn btn-primary">Complete payment order</button>
+            </div>
+          </div>
+        </form>
+      </div> -->
     </div>
   </div>
 </div>
