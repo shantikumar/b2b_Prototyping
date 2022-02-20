@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Products</title>
+        
+        <!-- CSS only -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        
+        <!-- Material Icons Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet"  />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.css" rel="stylesheet" />
+
+        <link href="../css/global.css" rel="stylesheet">
+        <link href="../css/customer/header.css" rel="stylesheet">
+        <link href="../css/customer/products.css" rel="stylesheet">
+    </head>
+    <body class="bg-light-grey">
+        
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm  hr-nav">
+                <div class="container-xxl">
+                  <a class="navbar-brand" href="#">
+                    <img src="../img/customer/redbull_logo.svg" alt="Redbull F1 Racing" width="136" height="40">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Dashboard</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Staffs</a></li>
+                    </ul>
+
+                    
+                    <div class="dropdown rounded-circle">
+                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            $ US Dollar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown only-icon">
+                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="icon-16"><img src="../img/flags/1x1/us.svg"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown only-icon">
+                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="material-icons">notifications</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Yas marina circuit
+                        </a>
+                      
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Profile</a></li>
+                          <li><a class="dropdown-item" href="#">Settings</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </nav>
+        </header>
+
+        <div class="container-xxl">
+            <main class="mt-3">
+                <div class="product-subheader">
+                    <div class="row d-flex flex-row align-items-center">
+                        <div class="col-lg-3">
+                            <section class="d-flex flex-row align-items-center flex-gap-10">
+                                <a href="events.html"><span class="material-icons-round">arrow_back</span></a>
+                                <div class="card bg-transparent border-0">
+                                    <div class="card-body">
+                                      <h5 class="card-title fs-6 m-0">Bahrain Grand Prix</h5>
+                                        <small class="card-text text-muted">18 Mar - 22 Mar 2022</small>
+                                    </div>
+                                  </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-7">
+                            <section class="product-header-search">
+                                <form class="d-flex align-items-center">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search Products" aria-describedby="btnProductSearch">
+                                        <button class="btn btn-primary" type="button" id="btnProductSearch">
+                                            <span class="material-icons-round">search</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                        <div class="col-lg-2">
+                            <section class="product-header-cart d-flex flex-row align-items-center flex-gap-20">
+                                <div class="product-cart-holder d-flex flex-row align-items-center flex-gap-5 position-relative">
+                                    <span class="material-icons-outlined fs-2">shopping_cart</span>
+                                    <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                      </span>
+                                    Cart
+                                </div>
+                                <span class="product-cart-amount fw-bold">$0.00</span>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <aside class="sidebar">
+                            <div class="side-level bg-white p-4 rounded">
+                                <div class="d-flex flex-row align-items-center justify-content-between border-bottom">
+                                    <span>Filters</span> 
+                                    <a href="" class="btn btn-link text-decoration-none disabled" role="button" aria-disabled="true">Clear all</a>
+                                </div>
+                                <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                                    <li class="text-muted mt-3"><small>Categories</small></li>
+                                    <li class="mb-1">
+                                        <div class="accordion accordion-flush" id="accordionAlcohol">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Alcohol</button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionAlcohol">
+                                                    <div class="accordion-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="cannedBeer">
+                                                                    <label class="form-check-label" for="cannedBeer">
+                                                                        Canned Beer<small class="text-muted ps-1">(2)</small>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="bottledBeer">
+                                                                    <label class="form-check-label" for="bottledBeer">
+                                                                        Bottled Beer<small class="text-muted ps-1">(2)</small>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="redWine">
+                                                                    <label class="form-check-label" for="redWine">
+                                                                        Red Wine<small class="text-muted ps-1">(2)</small>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </li>
+                                    <li class="mb-1">
+                                        <div class="accordion accordion-flush" id="accordionFood">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="accordionFood">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#foodItems" aria-expanded="true" aria-controls="foodItems">Food items</button>
+                                                </h2>
+                                                <div id="foodItems" class="accordion-collapse collapse show" aria-labelledby="accordionFood" data-bs-parent="#accordionAlcohol">
+                                                    <div class="accordion-body">
+                                                        <ul class="list-unstyled">
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="bakery">
+                                                                    <label class="form-check-label" for="bakery">
+                                                                        Bakery<small class="text-muted ps-1">(2)</small>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="seafood">
+                                                                    <label class="form-check-label" for="seafood">
+                                                                        Seafood<small class="text-muted ps-1">(2)</small>
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="side-level bg-white p-4 mt-3 rounded">
+                                <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                                    <li class="text-muted"><small>Price Range</small></li>
+                                    <li class="mt-4">
+                                        <div class="filter-item__body">
+                                            <div class="range__inputs">
+                                                <label for="input-num-min">Min.</label>
+                                                <input type="number" name="num_min" id="input-num-min" value="1" min="1" max="1000">
+                                                <span>Max.</span>
+                                                <input type="number" name="num_max" id="input-num-max" value="1000" min="2" max="5000">
+                                            </div>
+
+                                            <div class="slider-wrapper slider-ghost mt-5 ml-3" id="num_range">
+                                                <input class="input-range" type="text" data-slider-step="1" data-slider-value="1, 1000" data-slider-min="1" data-slider-max="5000" data-slider-range="true" data-slider-tooltip_split="true" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="side-level bg-white p-4 mt-3 rounded">
+                                <ul class="list-unstyled mb-0 py-3 pt-md-1 check-only">
+                                    <li class="text-muted mb-3"><small>Colours</small></li>
+                                    <li class="mb-1">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-primary border-primary" type="checkbox" value="" id="primary" checked>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-danger border-danger" type="checkbox" value="" id="danger" checked>
+                                                </div>
+                                            </li> 
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-success border-success" type="checkbox" value="" id="success" checked>
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-warning border-warning" type="checkbox" value="" id="warning">
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-info border-info" type="checkbox" value="" id="info">
+                                                </div>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input bg-secondary border-secondary" type="checkbox" value="" id="secondary">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-lg-9 bg-white product-list">
+                        <div class="product-list-cart-header d-flex align-items-center justify-content-between my-2 border-bottom pb-3">
+                            <small>Showing <strong>1-10</strong> of 240 results</small>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <label for="SortDropdown" class="pe-2">Sort by:</label>
+                                <select class="form-select w-auto" id="SortDropdown" aria-label="Sort Select">
+                                    <option selected>Featured</option>
+                                    <option value="1">Price: Low to High</option>
+                                    <option value="2">Price: High to low</option>
+                                    <option value="3">New arrivals</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- List -->
+                        <div class="card mb-3 border-0 border-bottom pb-4">
+                            <div class="row g-0">
+                              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <div class="w-75">
+                                    <img src="../img/products/corona.jpeg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                              </div>
+                              <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="card-body pe-4">
+                                                <h5 class="card-title fs-4 mb-3">Corona bottled beer 24 x 330ml bottles</h5>
+                                                <p class="card-text">
+                                                    Corona Extra Mexican Lager Beer is an even-keeled imported beer with aromas of 
+                                                    fruity-honey and a tou. . .  
+                                                    <br>
+                                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#productDetail">See more</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mt-3">
+                                            <p class="card-text m-0"><s class="text-muted">$320.00</s></p>
+                                            <h5 class="card-title fs-3 text-danger"><strong>$275.00</strong></h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form class="needs-validation">
+                                                <div class="row ps-3 mt-4">
+                                                    <div class="col-md-3">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column">
+                                                            <label for="productQuantity" class="form-label">Quantity</label>
+                                                            <div class="d-flex align-items-center justify-content-between product-qty">
+                                                                <button type="submit" class="btn btn-link disabled">
+                                                                    <span class="material-icons-outlined">remove_circle</span>                                                            
+                                                                </button>
+                                                                <input type="text" value="1" class="form-control text-center" id="productQuantity" style="width:60px">
+                                                                <button type="submit" class="btn btn-link">
+                                                                    <span class="material-icons-outlined">add_circle</span>
+                                                                </button>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column">
+                                                            <label for="dates" class="form-label">Delivery date</label>
+                                                            <input type="text" class="form-control" name="dates" id="dates" placeholder="dd/mm/yyyy" />
+                                                            <div class="invalid-feedback">Delivery date is required.</div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column w-50">
+                                                            <label for="productUnit" class="form-label">Unit</label>
+                                                            <select class="form-select" id="productUnit" aria-label="Default select example">
+                                                              <option selected>1</option>
+                                                              <option value="1">2</option>
+                                                              <option value="2">3</option>
+                                                              <option value="3">4</option>
+                                                            </select>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row ps-3 mt-4 d-flex align-items-end justify-content-between">
+                                                    <div class="col-md-9">
+                                                        <label for="productLocation1" class="form-label">Delivery location / Comments <small class="text-muted">(Optional)</small></label>
+                                                        <input type="text" class="form-control" id="productLocation1">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="submit" class="btn btn-outline-primary">Add to cart</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                
+                                              </form>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                        </div>
+
+
+                        <div class="card mb-3 border-0 border-bottom pb-4">
+                            <div class="row g-0">
+                              <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <div class="w-75">
+                                    <img src="../img/products/security.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                              </div>
+                              <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="card-body pe-4">
+                                                <h5 class="card-title fs-4 mb-3">Security Guards</h5>
+                                                <p class="card-text">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust . . .
+                                                    <br> 
+                                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#productDetail">See more</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mt-3">
+                                            <p class="card-text m-0"><s class="text-muted">$220.00</s></p>
+                                            <h5 class="card-title fs-3 text-danger"><strong>$200.00</strong></h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <form class="needs-validation">
+                                                <div class="row ps-3 mt-4">
+                                                    <div class="col-md-3">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column">
+                                                            <label for="productQUantity" class="form-label">Quantity</label>
+                                                            <div class="d-flex align-items-center justify-content-between product-qty">
+                                                                <button type="submit" class="btn btn-link disabled">
+                                                                    <span class="material-icons-outlined">remove_circle</span>                                                            
+                                                                </button>
+                                                                <input type="text" value="1" class="form-control text-center" id="productQUantity" style="width:60px">
+                                                                <button type="submit" class="btn btn-link">
+                                                                    <span class="material-icons-outlined">add_circle</span>
+                                                                </button>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column">
+                                                            <label for="daterange" class="form-label">Delivery date</label>
+                                                            <input type="text" class="form-control" name="daterange" id="daterange" placeholder="dd/mm/yyyy" />
+                                                            <div class="invalid-feedback">Delivery date is required.</div>
+                                                          </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="d-flex align-items-start justify-content-between flex-column w-50">
+                                                            <label for="productUnit" class="form-label">Unit</label>
+                                                            <select class="form-select" id="productUnit" aria-label="Default select example">
+                                                              <option selected>1</option>
+                                                              <option value="1">2</option>
+                                                              <option value="2">3</option>
+                                                              <option value="3">4</option>
+                                                            </select>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row ps-3 mt-4 d-flex align-items-end justify-content-between">
+                                                    <div class="col-md-9">
+                                                        <label for="productLocation2" class="form-label">Delivery location / Comments <small class="text-muted">(Optional)</small></label>
+                                                        <input type="text" class="form-control" id="productLocation2">
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="submit" class="btn btn-outline-primary">Add to cart</button>
+                                                    </div>
+                                                </div>
+
+                                                
+
+                                              </form>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                        </div>
+                        <!--  -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous" disabled>
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="mt-5 bg-white">
+            <div class="container-xl">
+                <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                    <li class="list-inline-item">
+                        <a href="#">Conditions of User &amp; Sale</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Privacy Notice</a>
+                    </li>
+                    <li class="list-inline-item">
+                        &copy; 2021-2022 B2B System. All Rights Reserved.
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        
+        <!-- Modal -->
+        <div class="modal fade side-open" id="productDetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="staticBackdropLabel">Corona bottled beer 24 x 330ml bottles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <strong>Ingredients:</strong><br>
+                        Water, Barley Malt, Maize, Hops
+                    </p>
+                    <ul>
+                        <li>The packaging of the item may differ from image as we may repackage to avoid damages</li>
+                        <li>This pack contains 24x330ml Bottles of Corona Extra Mexican Lager Beer, 4.5% ABV</li>
+                        <li>Corona has its origins in Mexico since 1925 and is one of Mexico's favourite brands</li>
+                        <li>It is lighter than traditional beers, with a crisp and refreshing taste that is both balanced and full of flavour. It is best enjoyed with a wedge of lime to bring out the full citrus taste of the hops and malts</li>
+                        <li>The aroma of Corona Extra Mexican Lager Beer is fruity-honey, with a touch of malt and the flavour is crisp and well-balanced between hops and malt, toward the malt side</li>
+                        <li>Corona's superior taste profile is due to the fact that our brewers take great care to use only the best ingredients available, made with the finest quality blend of filtered water, malted barley, hops, corn and yeast</li>
+                        <li>Whatever the time of year, Corona is best served ice cold ad with a wedge of lime, that both complements and intensifies the flavour</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+
+        <script src="../js/range-slider.js"></script>
+        
+        
+        <script>
+            $(function() {
+                $('input[name="daterange"]').daterangepicker({
+                opens: 'left'
+                }, function(start, end, label) {
+                    console.log("A new date selection was made: " + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY'));
+                });
+            });
+
+
+            $(function() {
+                $('input[name="dates"]').daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true,
+                    minYear: 1901,
+                    maxYear: parseInt(moment().format('DD'),10)
+                });
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,11 +1,16 @@
 
+
+/* this CSS is related to login and forgot password pages */
+
+
 /* banner */
 .lg-banner {
-    background: url(../img/lg-banner.jpeg) no-repeat 50%/cover; 
-    background-clip: content-box;
     margin-left: -11.3333%;
 }
 
+.bg-cover {
+    background: no-repeat 50%/cover;
+}
 /* .vw-50 {
     width: 50vw!important;
 } */
@@ -13,14 +18,81 @@
 /* logo */
 .h-brand {
     display: inline-block;
-    width: 261px;
+    /* width: 231px; */
     height: 81px;
 }
 
+
+
 /* form */
+.login-form {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px 52px;
+}
+.login-form-content {
+    max-width: 500px;
+    width: 100%;
+}
+.login-form-content .alert {
+    display: flex;
+    justify-content: space-between;
+}
+.login-form-content .alert p {
+    width: 90%;
+    margin: 0;
+}
+.login-form-content .alert-danger {
+    background-color: rgba(255,56,56,.1);
+    border-color: transparent;
+}
+
 .filled-text .i-addon {
     position: absolute;
     top:16px;
     right:16px;
     color: rgba(0,0,0,.4);
+}
+
+.l-avatar {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+}
+
+.success-icon span {
+    font-size: 48px;
+    color: #00D287;
+}
+
+.start-footer-text {
+    position: relative;
+}
+.start-footer-text p {
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .lg-banner {
+        margin-left: -23.3333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .lg-banner {
+        margin-left: -23.3333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .lg-banner {
+        margin-left: -23.3333%;
+    }
 }

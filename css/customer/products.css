@@ -1,0 +1,97 @@
+.product-header-search form select {
+    border: none;
+    background-color: #fff;
+    /* min-width: 140px !important;
+    max-width: 300px !important;*/
+    font-size: 14px;
+    flex: none !important;
+    min-width: auto !important;
+    width: auto !important;
+}
+.product-header-search .form-control {
+    padding-left: 16px;
+}
+.product-header-search .input-group .btn {
+    border-radius: 0.25rem;
+}
+.product-header-search .input-group .btn span {
+    vertical-align: middle;
+}
+
+.product-list .product-list-cart-header label,
+.product-list .product-list-cart-header select {
+    font-size: 14px;
+}
+aside.sidebar .accordion .accordion-item .accordion-header .accordion-button {
+    color: #000;
+}
+aside.sidebar .accordion .accordion-button:not(.collapsed) {
+    background: transparent;
+    box-shadow: none;
+}
+aside.sidebar .accordion .accordion-body {
+    padding-top: 0;
+}
+.side-level .check-only .form-check .form-check-input{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* range slider */
+.slider.slider-horizontal {
+    width: 100%;
+}
+.product-qty .btn {
+    display: flex;
+    text-decoration: none;
+    padding: 0;
+    height: 38px;
+    align-items: center;
+    margin-left: 5px;
+}
+.product-qty .btn:first-child {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.slider-selection {
+	background: #0038FF !important;
+}
+.slider-ghost .slider-track {
+	height: 5px !important;
+}
+.slider-ghost .slider-handle {
+	top: -2px !important;
+	border: 5px solid #0038FF;
+  background: #fff;
+}
+.range__inputs input[type="number"]{
+  border-radius: 4px;
+  padding: 4px 6px;
+  border: 1px solid #aaa;
+  width: 80px;
+}
+
+.tooltip .arrow {
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+}
+.bs-tooltip-top {
+    padding: 0.4rem 0;
+}
+.tooltip .arrow::before {
+    position: absolute;
+    content: "";
+    border-color: transparent;
+    border-style: solid;
+}
+.bs-tooltip-top .arrow::before {
+    top: 0;
+    border-width: 0.4rem 0.4rem 0;
+    border-top-color: #000;
+}
+.bs-tooltip-top .arrow {
+    bottom: 0;
+}
