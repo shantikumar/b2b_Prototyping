@@ -413,18 +413,7 @@ span[class^="order-"] {
 
 /* modal - products (add+edit form) */
 
-.table-wrapper.ev-modal-products
-  .p-component
-  table
-  > thead
-  > tr
-  > th:nth-child(1),
-.table-wrapper.ev-modal-products
-  .p-component
-  table
-  > tbody
-  > tr
-  > td:nth-child(1),
+
 .table-wrapper.ev-modal-pricing-rules
   .p-component
   table
@@ -444,6 +433,20 @@ span[class^="order-"] {
   table
   > thead
   > tr
+  > th:nth-child(1),
+.table-wrapper.ev-modal-products
+  .p-component
+  table
+  > tbody
+  > tr
+  > td:nth-child(1) {
+  width: 250px;
+}
+.table-wrapper.ev-modal-products
+  .p-component
+  table
+  > thead
+  > tr
   > th:nth-child(2),
 .table-wrapper.ev-modal-products
   .p-component
@@ -451,7 +454,7 @@ span[class^="order-"] {
   > tbody
   > tr
   > td:nth-child(2) {
-  width: 470px;
+  width: 160px;
 }
 .table-wrapper.ev-modal-products
   .p-component
@@ -464,21 +467,7 @@ span[class^="order-"] {
   table
   > tbody
   > tr
-  > td:nth-child(3) {
-  width: 160px;
-}
-.table-wrapper.ev-modal-products
-  .p-component
-  table
-  > thead
-  > tr
-  > th:nth-child(4),
-.table-wrapper.ev-modal-products
-  .p-component
-  table
-  > tbody
-  > tr
-  > td:nth-child(4),
+  > td:nth-child(3),
 .table-wrapper.ev-modal-pricing-rules
   .p-component
   table
