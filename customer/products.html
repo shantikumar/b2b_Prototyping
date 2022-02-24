@@ -52,7 +52,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.css"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="css/font-awesome.css" />
     <link href="../css/global.css" rel="stylesheet" />
     <link href="../css/customer/header.css" rel="stylesheet" />
     <link href="../css/customer/products.css" rel="stylesheet" />
@@ -205,27 +205,15 @@
               </section>
             </div>
             <div class="col-lg-7 col-md-7">
-              <section class="product-header-search">
-                <form class="d-flex align-items-center">
-                  <div class="input-group">
-                    <div class="wrapper">
-                      <div class="search-input">
-                        <a href="" target="_blank" hidden></a>
-                        <input
-                          type="text"
-                          placeholder="Type to search.."
-                          class="form-control search-radius"
-                          style="width: 100%"
-                        />
-                        <div class="autocom-box">
-                          <!-- here list are inserted from javascript -->
-                        </div>
-                        <div class="icon"><i class="fas fa-search"></i></div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </section>
+              <input
+                id="typeahead-format"
+                type="text"
+                class="form-control"
+                [(ngModel)]="model"
+                [ngbTypeahead]="search"
+                [resultFormatter]="formatter"
+              />
+              <hr />
             </div>
             <div class="col-lg-2 col-md-2">
               <section
@@ -977,7 +965,7 @@
     >
       <div class="modal-dialog cart-div">
         <div class="modal-content">
-          <div class="modal-header border-0">
+          <div class="add-to-cart-modal-header border-0">
             <h3 class="modal-title" id="staticBackdropLabel">Cart (3)</h3>
             <button
               type="button"
@@ -988,12 +976,14 @@
           </div>
           <div class="alert-line">
             <div class="row" style="align-items: center">
-              <div class="col-md-12" style="align-items: center">
+              <div class="col-md-1" style="align-items: center">
                 <span
                   class="material-icons-outlined fs-3"
-                  style="padding: 1rem 0 0 1rem"
+                  style="padding: 0.7rem 0 0 1rem"
                   >error_outline</span
                 >
+              </div>
+              <div class="col-md-11" style="align-items: center">
                 <span>
                   cart will expire in “2 days 17 hours 51 minutes 48 seconds “
                 </span>
@@ -1215,18 +1205,25 @@
                   <label for="productLocation1" class="form-label"
                     >Additional details
                   </label>
-                  <input
-                    type="text"
+                  <textarea
                     class="form-control"
                     id="additional-details"
-                  />
+                    name="additional-details"
+                    rows="4"
+                    cols="50"
+                  ></textarea>
                 </div>
               </div>
-              <div class="row">
+              <hr />
+              <div class="row" style="padding: 16px">
                 <div class="col-md-6 col-lg-6">
-                  <h3 class="modal-title" id="staticBackdropLabel">
+                  <h5
+                    class="modal-title"
+                    id="staticBackdropLabel"
+                    style="font-size: 20px; font-weight: 600"
+                  >
                     Subtotal (3 item)
-                  </h3>
+                  </h5>
                 </div>
                 <div class="col-md-3 col-lg-3">
                   <h3 class="modal-title" id="staticBackdropLabel"></h3>
@@ -1235,6 +1232,12 @@
                   <h3 class="modal-title" id="staticBackdropLabel">
                     <strong>$200.00</strong>
                   </h3>
+                </div>
+              </div>
+
+              <div class="row justify-content-end">
+                <div class="col-md-2 col-lg-2">
+                  <input class="btn btn-primary" type="submit" value="Submit" />
                 </div>
               </div>
             </form>
