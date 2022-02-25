@@ -30,6 +30,9 @@ body {
 .bg-light-grey {
   background-color: #f5f5f5;
 }
+.bg-light-white {
+  background-color: #fff;
+}
 
 .btn {
   border-radius: 20px;
