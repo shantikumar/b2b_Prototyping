@@ -1,0 +1,84 @@
+.order-top-info {
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 50%;
+}
+.order-top-info-data {
+  font-weight: 600;
+  font-size: 16px;
+}
+.customer-badge.status-unqualified,
+.modal-body .badge.bg-danger {
+  background-color: #f5dbd9 !important;
+  color: #ac0c00;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-proposal,
+.modal-body .badge.bg-warning {
+  background-color: #feecb5 !important;
+  color: #7d5f00;
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-new,
+.modal-body .badge.bg-info {
+  background-color: #cfe2ff !important;
+  color: #084298;
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-qualified,
+.modal-body .badge.bg-success {
+  background-color: #dff0d0 !important;
+  color: #418b00;
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-negotiation {
+  background-color: #e2e3e5 !important;
+  color: rgba(0, 0, 0, 0.7);
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-renewal,
+.modal-body .badge.bg-light {
+  background-color: #eccfff !important;
+  color: #694382;
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.customer-badge.status-negotiation,
+.modal-body .badge.bg-secondary {
+  background-color: #e2e3e5 !important;
+  color: rgba(0, 0, 0, 0.7);
+
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12;
+  text-align: center;
+}
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}

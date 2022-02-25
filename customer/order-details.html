@@ -54,10 +54,139 @@
     />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/customer/order.css" rel="stylesheet" />
     <link href="../css/customer/header.css" rel="stylesheet" />
     <link href="../css/customer/products.css" rel="stylesheet" />
   </head>
   <body class="bg-light-white">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light shadow-sm hr-nav"
+      >
+        <div class="container-xxl">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../img/customer/redbull_logo.svg"
+              alt="Redbull F1 Racing"
+              width="111"
+              height="46"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="orders.html">Orders</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Staffs</a></li>
+            </ul>
+
+            <div class="dropdown rounded-circle">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                $ US Dollar
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown only-icon">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="icon-16"
+                  ><img src="../img/flags/1x1/us.svg"
+                /></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown only-icon">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="material-icons">notifications</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Yas marina circuit
+              </a>
+
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="../index.html">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div class="container-xxl">
       <main class="mt-3">
         <div class="product-subheader">
@@ -69,377 +198,270 @@
                 >
                 <div class="card bg-transparent border-0">
                   <div class="card-body">
-                    <h2 class="event-title-card">Order No. 18181818</h2>
+                    <h2 class="event-title-card">
+                      <strong> Order No. 18181818</strong>
+                    </h2>
                   </div>
                 </div>
               </section>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-3" style="padding: 1rem 1rem">
           <div class="col-lg-12 bg-white product-list col-md-12 col-sm-12">
             <div
-              class="product-list-cart-header d-flex align-items-center justify-content-between my-2 border-bottom pb-3"
+              class="row d-flex flex-row align-items-center justify-content-between"
             >
-              <small>Showing <strong>1-10</strong> of 240 results</small>
-              <div class="d-flex align-items-center justify-content-between">
-                <label for="SortDropdown" class="pe-2">Sort by:</label>
-                <select
-                  class="form-select w-auto"
-                  id="SortDropdown"
-                  aria-label="Sort Select"
-                >
-                  <option selected>Featured</option>
-                  <option value="1">Price: Low to High</option>
-                  <option value="2">Price: High to low</option>
-                  <option value="3">New arrivals</option>
-                </select>
+              <div class="col-sm-6 col-md-2">
+                <div class="row order-top-info">Order placed</div>
+              </div>
+              <div class="col-sm-6 col-md-2">
+                <div class="row order-top-info">Order status</div>
+              </div>
+              <div class="col-sm-6 col-md-2">
+                <div class="row order-top-info">Payment status</div>
+              </div>
+              <div class="col-sm-5 col-md-5 justify-content-end">
+                <div class="row order-top-info"></div>
               </div>
             </div>
-
-            <!-- List -->
-            <div class="card mb-3 border-0 border-bottom pb-4">
-              <div class="row g-0">
-                <div class="col-md-4 d-flex">
-                  <div>
-                    <div class="row g-0 justify-content-center">
-                      <div class="main-product-image">
-                        <img
-                          src="../img/products/corona.jpeg"
-                          class="img-fluid rounded-start"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                    <div class="row g-0 justify-content-center">
-                      <div class="extra-product-images">
-                        <img
-                          src="../img/products/corona.jpeg"
-                          class="img-fluid rounded-start"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="extra-product-images">
-                        <img
-                          src="../img/products/corona.jpeg"
-                          class="img-fluid rounded-start"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="extra-product-images">
-                        <img
-                          src="../img/products/corona.jpeg"
-                          class="img-fluid rounded-start"
-                          alt="..."
-                        />
-                      </div>
-                    </div>
-                  </div>
+            <div
+              class="row d-flex flex-row align-items-end justify-content-between mt-3"
+            >
+              <div class="col-sm-3 col-md-2">
+                <div>
+                  <div class="row order-top-info-data">25-02-2022, 17:05</div>
                 </div>
-                <div class="col-md-8 col-sm-8">
+              </div>
+              <div class="col-sm-3 col-md-2">
+                <div>
                   <div class="row">
-                    <div class="col-md-9 col-sm-12">
-                      <div class="card-body pe-4">
-                        <h5 class="card-title fs-4 mb-3">
-                          Corona bottled beer 24 x 330ml bottles
-                        </h5>
-                        <p class="card-text">
-                          Corona Extra Mexican Lager Beer is an even-keeled
-                          imported beer with aromas of fruity-honey and a tou. .
-                          .
-                          <br />
-                          <a
-                            href="javascript:void(0);"
-                            data-bs-toggle="modal"
-                            data-bs-target="#productDetail"
-                            >See more</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-3 mt-3">
-                      <p class="card-text m-0">
-                        <s class="text-muted">$320.00</s>
-                      </p>
-                      <h5 class="card-title fs-3 text-danger">
-                        <strong>$275.00</strong>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <form class="needs-validation">
-                        <div class="row ps-3 mt-4">
-                          <div class="col-md-6 col-lg-12 col-sm-6">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column"
-                            >
-                              <label for="productQuantity" class="form-label"
-                                >Quantity</label
-                              >
-                              <div
-                                class="d-flex align-items-center justify-content-between product-qty"
-                              >
-                                <button
-                                  type="submit"
-                                  class="btn btn-link disabled"
-                                >
-                                  <span class="material-icons-outlined"
-                                    >remove_circle</span
-                                  >
-                                </button>
-                                <input
-                                  type="text"
-                                  value="1"
-                                  class="form-control text-center"
-                                  id="productQuantity"
-                                  style="width: 60px"
-                                />
-                                <button type="submit" class="btn btn-link">
-                                  <span class="material-icons-outlined"
-                                    >add_circle</span
-                                  >
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-sm-6">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column"
-                            >
-                              <label for="dates" class="form-label"
-                                >Delivery date</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="dates"
-                                id="dates"
-                                placeholder="dd/mm/yyyy"
-                              />
-                              <div class="invalid-feedback">
-                                Delivery date is required.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-12 col-lg-3">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column w-50"
-                            >
-                              <label for="productUnit" class="form-label"
-                                >Unit</label
-                              >
-                              <select
-                                class="form-select"
-                                id="productUnit"
-                                aria-label="Default select example"
-                              >
-                                <option selected>1</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="row ps-3 mt-4 d-flex align-items-end justify-content-between"
-                        >
-                          <div class="col-md-9">
-                            <label for="productLocation1" class="form-label"
-                              >Delivery location / Comments
-                              <small class="text-muted"
-                                >(Optional)</small
-                              ></label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="productLocation1"
-                            />
-                          </div>
-                          <div class="col-md-3">
-                            <button
-                              type="submit"
-                              class="btn btn-outline-primary"
-                            >
-                              Add to cart
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
+                    <span
+                      class="customer-badge status-unqualified"
+                      style="width: fit-content"
+                      >Pending Resubmission</span
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="card mb-3 border-0 border-bottom pb-4">
-              <div class="row g-0">
-                <div
-                  class="col-md-4 col-sm-4 d-flex align-items-center justify-content-center"
-                >
-                  <div class="w-75">
-                    <img
-                      src="../img/products/security.jpg"
-                      class="img-fluid rounded-start"
-                      alt="..."
-                    />
-                  </div>
-                </div>
-                <div class="col-md-8 col-sm-3">
+              <div class="col-sm-3 col-md-2">
+                <div>
                   <div class="row">
-                    <div class="col-md-9">
-                      <div class="card-body pe-4">
-                        <h5 class="card-title fs-4 mb-3">Security Guards</h5>
-                        <p class="card-text">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the indust
-                          . . .
-                          <br />
-                          <a
-                            href="javascript:void(0);"
-                            data-bs-toggle="modal"
-                            data-bs-target="#productDetail"
-                            >See more</a
-                          >
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-3 mt-3">
-                      <p class="card-text m-0">
-                        <s class="text-muted">$220.00</s>
-                      </p>
-                      <h5 class="card-title fs-3 text-danger">
-                        <strong>$200.00</strong>
-                      </h5>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <form class="needs-validation">
-                        <div class="row ps-3 mt-4">
-                          <div class="col-md-3 col-sm-3">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column"
-                            >
-                              <label for="productQUantity" class="form-label"
-                                >Quantity</label
-                              >
-                              <div
-                                class="d-flex align-items-center justify-content-between product-qty"
-                              >
-                                <button
-                                  type="submit"
-                                  class="btn btn-link disabled"
-                                >
-                                  <span class="material-icons-outlined"
-                                    >remove_circle</span
-                                  >
-                                </button>
-                                <input
-                                  type="text"
-                                  value="1"
-                                  class="form-control text-center"
-                                  id="productQUantity"
-                                  style="width: 60px"
-                                />
-                                <button type="submit" class="btn btn-link">
-                                  <span class="material-icons-outlined"
-                                    >add_circle</span
-                                  >
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-sm-6">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column"
-                            >
-                              <label for="daterange" class="form-label"
-                                >Delivery date</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="daterange"
-                                id="daterange"
-                                placeholder="dd/mm/yyyy"
-                              />
-                              <div class="invalid-feedback">
-                                Delivery date is required.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-3 col-sm-3">
-                            <div
-                              class="d-flex align-items-start justify-content-between flex-column w-50"
-                            >
-                              <label for="productUnit" class="form-label"
-                                >Unit</label
-                              >
-                              <select
-                                class="form-select"
-                                id="productUnit"
-                                aria-label="Default select example"
-                              >
-                                <option selected>1</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="row ps-3 mt-4 d-flex align-items-end justify-content-between"
-                        >
-                          <div class="col-md-9 col-sm-9">
-                            <label for="productLocation2" class="form-label"
-                              >Delivery location / Comments
-                              <small class="text-muted"
-                                >(Optional)</small
-                              ></label
-                            >
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="productLocation2"
-                            />
-                          </div>
-                          <div class="col-md-3 col-sm-9">
-                            <button
-                              type="submit"
-                              class="btn btn-outline-primary"
-                            >
-                              Add to cart
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
+                    <span
+                      class="customer-badge status-unqualified"
+                      style="width: fit-content"
+                      >Unpaid</span
+                    >
                   </div>
                 </div>
               </div>
-            </div>
-            <!--  -->
-            <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous" disabled>
-                    <span aria-hidden="true">&laquo;</span>
+              <div class="col-sm-2 col-md-5">
+                <div class="row d-inline float-end">
+                  <a href="" class="d-flex align-items-center flex-gap-10">
+                    <span class="material-icons-outlined">file_download</span>
+                    Invoice
                   </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card od-step-wiz rounded-3 mb-4">
+          <div
+            class="card-body d-flex align-items-center justify-content-between p-4"
+          >
+            <div
+              class="d-flex align-items-center flex-gap-10 text-muted filled"
+            >
+              <span class="material-icons">pending_actions</span> Pending
+              Approval
+            </div>
+            <div
+              class="d-flex align-items-center flex-gap-10 text-muted filled"
+            >
+              <span class="material-icons">verified</span> Approved
+            </div>
+            <div
+              class="d-flex align-items-center flex-gap-10 text-muted filled"
+            >
+              <span class="material-icons">receipt</span> Invoiced
+            </div>
+            <div class="d-flex align-items-center flex-gap-10 text-muted">
+              <span class="material-icons">monetization_on</span> Paid
+            </div>
+          </div>
+        </div>
+        <div class="card rounded-3 bg-light mb-4">
+          <div class="card-body p-0 d-flex justify-content-between">
+            <div class="w-75 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0"
+                  >Event</label
+                >
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">
+                  Abu Dhabi Grand Prix
+                </p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label
+                    for="orderStatus"
+                    class="form-label text-muted d-block m-0"
+                    >Team Name</label
+                  >
+                  <p class="form-control-plaintext p-0" id="orderStatus">
+                    Team Mclaren
+                  </p>
+                </div>
+                <div class="w-100">
+                  <label
+                    for="paymentStatus"
+                    class="form-label d-block text-muted m-0"
+                    >Email address</label
+                  >
+                  <p class="form-control-plaintext p-0" id="paymentStatus">
+                    mclarenF1A.team@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="w-25 border-start m-0 ps-4 pt-3 fs-5">Focal Point</p>
+            <div class="w-100 py-4 px-3">
+              <div class="w-100 mb-4">
+                <label for="orderPlaced" class="form-label text-muted m-0"
+                  >Name</label
+                >
+                <p class="form-control-plaintext p-0 fw-bold" id="orderPlaced">
+                  Yas Marina Circuit
+                </p>
+              </div>
+              <div class="d-flex justify-content-between flex-gap-20">
+                <div class="w-100">
+                  <label
+                    for="orderStatus"
+                    class="form-label text-muted d-block m-0"
+                    >Email Address</label
+                  >
+                  <p class="form-control-plaintext p-0" id="orderStatus">
+                    F1Asales.ymc@gmail.com
+                  </p>
+                </div>
+                <div class="w-100">
+                  <label
+                    for="paymentStatus"
+                    class="form-label d-block text-muted m-0"
+                    >Phone no.</label
+                  >
+                  <p class="form-control-plaintext p-0" id="paymentStatus">
+                    +91-9873-773-333
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inv-cart-container">
+            <div class="inv-cart-body">
+  
+  
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <h4 class="text-dark">Details</h4>
+                <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#collapseConversation_5" role="button" aria-expanded="false" aria-controls="collapseConversation_5">
+                    View conversations
+                </a>
+              </div>
+              <div class="collapse msg-conv-container" id="collapseConversation_5">
+                <div class="card card-body d">
+                  <div class="msg-from-them">
+                    <div class="msg-detail">
+                      <strong>First Abu Dhabi Bank</strong>
+                      <span>01-10-2021 13:25</span>
+                    </div>
+                    <p class="from-them">Lorem Ipsum is simply dummy text of the printing</p>
+                  </div>
+                  <div class="msg-from-them">
+                    <div class="msg-detail">
+                      <strong>First Abu Dhabi Bank</strong>
+                      <span>01-10-2021 13:25</span>
+                    </div>
+                    <p class="from-them">Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                  </div>
+                  <div class="msg-from-me">
+                    <div class="msg-detail">
+                      <strong>Yas Marina Circuit</strong>
+                      <span>01-10-2021 13:25</span>
+                    </div>
+                    <p class="from-them">Where does it come from?</p>
+                  </div>
+                  <div class="msg-from-them">
+                    <div class="msg-detail">
+                      <strong>First Abu Dhabi Bank</strong>
+                      <span>01-10-2021 13:25</span>
+                    </div>
+                    <p class="from-them">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                  </div>
+                  <div class="msg-from-me">
+                    <div class="msg-detail">
+                      <strong>Yas Marina Circuit</strong>
+                      <span>01-10-2021 13:25</span>
+                    </div>
+                    <p class="from-them">Where can I get some?</p>
+                  </div>
+                </div>
+              </div>
+  
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th class="text-center">Days</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Units</th>
+                    <th>Units Price</th>
+                    <th>Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="">Large Double Glass Door 800 Ltrs</a>
+                    </td>
+                    <td class="text-center">2</td>
+                    <td>19-12-2021</td>
+                    <td>20-12-2021</td>
+                    <td class="text-center">1</td>
+                    <td class="text-center">1</td>
+                    <td>$2,126.00</td>
+                    <td>$2,126.00</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="">Large Double Glass Door 800 Ltrs</a>
+                    </td>
+                    <td class="text-center">2</td>
+                    <td>21-12-2021</td>
+                    <td>22-12-2021</td>
+                    <td class="text-center">2</td>
+                    <td class="text-center">1</td>
+                    <td>$2,126.00</td>
+                    <td>$8,504.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="inv-cart-footer">
+              <div class="text-end">
+                <div class="text-end pe-5">
+                  <p>Sub Total: $12,756.00</p>
+                  <p>Tax(18%) : $0.00</p>
+                  <p>Discount: $0.00</p>
+                  <h4 class="fw-bold">Total amount: $12,756.00</h4>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
