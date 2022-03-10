@@ -38,9 +38,9 @@ aside.sidebar .accordion .accordion-body {
 }
 
 /* range slider */
-.slider.slider-horizontal {
+/*.slider.slider-horizontal {
   width: 100%;
-}
+}*/
 .product-qty .btn {
   display: flex;
   text-decoration: none;
