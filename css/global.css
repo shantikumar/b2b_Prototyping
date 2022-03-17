@@ -443,15 +443,18 @@ p[class^="from-"] {
 .od-step-wiz .card-body > div.filled::after {
   background-color: #00b330 !important;
 }
-.od-step-wiz .card-body > div::after {
+.od-step-wiz .card-body > .colored-steps {
   background-color: rgb(0 0 0 / 10%);
   content: "";
   height: 4px;
   display: block;
-  position: absolute;
-  width: 190px;
-  top: 12px;
-  left: 110%;
+  border-radius: 50rem;
+}
+.od-step-wiz .card-body > .colored-steps-filled {
+  background-color: rgb(0 179 48 / 100%);
+  content: "";
+  height: 4px;
+  display: block;
   border-radius: 50rem;
 }
 .od-step-wiz .card-body > div:last-child::after {
@@ -604,3 +607,14 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 } */
+.order-actions-columns{
+  padding: 2rem;
+  display: flexbox;
+  justify-content: end;
+  right: 0px !important;
+
+}
+.order-action-buttons{
+margin: 0 0 0 1rem !important;
+border-radius: 16px;
+}
