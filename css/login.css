@@ -91,3 +91,23 @@
 .filled-text{
     height: auto;
 }
+.welcome-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
+}
+.login-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px
+}
+.forget-password-text{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;    
+}
+.footer-text{
+    position: absolute; 
+    bottom: 0;
+}
+
