@@ -31,7 +31,15 @@
 .login-form-content {
     max-width: 500px;
     width: 100%;
-    margin-top: 10%;
+    padding-top: 10%;
+}
+@media (max-width: 991px) { 
+    .login-form{
+        display: flex;
+    }
+    .login-form-content {
+        margin: auto;
+    }
 }
 .login-form-content .alert {
     display: flex;
