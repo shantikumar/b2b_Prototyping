@@ -2,12 +2,6 @@
 
 /* this CSS is related to login and forgot password pages */
 
-
-/* banner */
-.lg-banner {
-    margin-left: -11.3333%;
-}
-
 .bg-cover {
     background: no-repeat 50%/cover;
 }
@@ -37,6 +31,7 @@
 .login-form-content {
     max-width: 500px;
     width: 100%;
+    margin-top: 20%;
 }
 .login-form-content .alert {
     display: flex;
@@ -78,21 +73,18 @@
     font-size: 12px;
     opacity: 0.5;
 }
-
-@media (min-width: 768px) {
-    .lg-banner {
-        margin-left: -23.3333%;
-    }
+.login-banner{
+    background-image: url(../img/login/FormBanner.png); 
+    padding: 10px; 
+    color: white;
 }
-
-@media (min-width: 992px) {
-    .lg-banner {
-        margin-left: -23.3333%;
-    }
+.brand-logo{
+    width: 25%;
+    height: auto
 }
-
-@media (min-width: 1200px) {
-    .lg-banner {
-        margin-left: -23.3333%;
-    }
+.login-description{
+    padding-top: 30%;
+    font-weight: 400;
+    line-height: 62px;
+    font-size: 35px
 }
