@@ -1,4 +1,6 @@
-
+body {
+    height: 100%;
+}
 
 /* this CSS is related to login and forgot password pages */
 
@@ -81,14 +83,17 @@
     font-size: 12px;
     opacity: 0.5;
 }
+
 .login-banner{
     background-image: url(../img/login/FormBanner.png); 
-    padding: 10px; 
+    width: 100%;
+    height: 100%;
     color: white;
+    position: fixed;
 }
 .brand-logo{
-    width: 25%;
-    height: auto
+    width: 240px;
+    height: 83px;
 }
 .login-description{
     padding-top: 17%;
@@ -119,3 +124,33 @@
     bottom: 0;
 }
 
+.login-container{
+    padding: 20px;
+}
+
+.full-width-login-container {
+    width: 100%; 
+    height: 500px; 
+    display: grid; 
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.small-login-container {
+    width: 100%; 
+    background-color: green;
+    height: 500px;
+ }
+
+@media (max-width: 767px) {                  
+    .full-width-login-container {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {                  
+    .small-login-container {
+        display: none !important;
+     }
+}
+
+     
