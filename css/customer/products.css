@@ -247,3 +247,38 @@ hr {
 .extra-product-images:hover {
   cursor: pointer;
 }
+
+.terms-and-conditions-title{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.terms-and-conditions-close{
+  border-radius: 50%;
+  background-color: #ddd;
+  padding: 10px;
+}
+.btn-close {
+  color: black !important;
+  opacity: 1;
+  font-size: 12px;
+}
+
+.termsAndConditionsModal{
+  border-radius: 18px 0px 0px 18px !important;
+}
+
+.termsAndConditionsBody{
+  border: 1px solid #d2d2d2;
+  padding: 25px;
+  margin: 25px;
+}
+
+.terms-and-conditions-link{
+  color: #2D78FA;
+  text-decoration: underline;
+  cursor: pointer;
+}
