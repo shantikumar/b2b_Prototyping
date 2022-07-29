@@ -1,0 +1,86 @@
+
+body {
+  height: 100%;
+  background-color: #efefef;
+}
+
+.bg-cover {
+  background: no-repeat 50% / cover;
+}
+
+.brand-logo {
+  width: 150px;
+  height: 62px;
+}
+
+.navbar-container{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.contact-us-link{
+  color: #3C99DC;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.content-container{
+  text-align: center;
+  padding: 75px;
+}
+
+.forbidden-error-title{
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;  
+  color: #3C99DC;
+  margin-bottom: 50px;
+}
+
+.forbidden-error-logo{
+  width: 40%;
+}
+
+.forbidden-error-description{
+  margin-top: 50px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  color: #3C99DC;
+  padding-left: 22%;
+  padding-right: 22%;
+}
+
+.go-back-button{
+  width: 161px; 
+  background-color: #3C99DC; 
+  border: none; 
+  height: 50px;
+  color: white;
+}
+.go-back-button:hover{
+  background-color: #58a6dd !important; 
+}
+
+@media (max-width: 768px) {
+  .forbidden-error-logo {
+    width: 100%;
+  }
+  .forbidden-error-description{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .forbidden-error-title,
+  .forbidden-error-description
+  {
+    font-size: 20px;
+  }
+}
