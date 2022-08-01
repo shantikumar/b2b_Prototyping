@@ -1,0 +1,46 @@
+.navbar-brand {
+  width: 136px;
+  height: 40px;
+  padding: 0;
+  margin-right: 2rem;
+}
+.navbar-collapse {
+  gap: 10px;
+}
+
+/* Nav */
+.hr-nav.navbar .navbar-nav {
+  gap: 20px;
+}
+
+.hr-nav.navbar .navbar-nav .nav-link {
+  padding: 8px 16px;
+}
+.hr-nav.navbar .navbar-nav .nav-link:hover,
+.hr-nav.navbar .navbar-nav .nav-link.active {
+  background-color: rgba(0, 56, 255, 0.08);
+  color: #0038ff;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.hr-nav.navbar .navbar-nav .nav-link.active {
+  font-weight: 600;
+}
+nav .dropdown .btn {
+  background-color: rgba(196, 196, 196, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+.dropdown .btn .material-icons {
+  font-size: 16px;
+}
+.only-icon a::after {
+  display: none;
+}
+.icon-16 {
+  width: 24px;
+  height: 18px;
+  display: flex;
+}

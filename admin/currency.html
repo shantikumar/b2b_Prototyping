@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>Admin | Currencies</title>
+
+  <!-- CSS only -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+  
+    <!-- Material Icons Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/primeng.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/accordion/accordion.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/button/button.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/card/card.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/paginator/paginator.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/scrolltop/scrolltop.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/table/table.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tag/tag.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/toast/toast.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/toolbar/toolbar.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tooltip/tooltip.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tree/tree.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treeselect/treeselect.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treetable/treetable.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/primeicons@4.1.0/primeicons.css" rel="stylesheet">
+    <link href="../css/primeNGstyles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/themes/saga-blue/theme.min.css" rel="stylesheet">
+  
+  
+    
+
+    <link href="../css/global.css" rel="stylesheet">
+    <link href="../css/customer/header.css" rel="stylesheet">
+    <link href="../css/table.css" rel="stylesheet">
+    <link href="../css/admin/admin.css" rel="stylesheet">
+    <link href="../css/admin/products.css" rel="stylesheet">
+    
+</head>
+
+<body class="bg-light-grey">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2">
+        <aside class=" side-nav">
+          <ul class="list-group bg-white">
+            <li class="list-group-item mb-5">
+              <a class="" href="#">
+                <img src="../img/Logo-Yas-Marina.png" alt="Redbull F1 Racing" width="136" height="40">
+              </a>
+            </li>
+            <li class="list-group-item">
+              <a href=""><span class="material-icons-outlined">pie_chart</span> Dashboard</a>
+            </li>
+            <li class="list-group-item">
+              <a href="events.html"><span class="material-icons-outlined">sports_motorsports</span> Events</a>
+            </li>
+            <li class="list-group-item">
+              <a href="products.html"><span class="material-icons">widgets</span> Products</a>
+            </li>
+            <li class="list-group-item">
+              <a href=""><span class="material-icons-outlined">person_pin</span> Customer</a>
+            </li>
+            <li class="list-group-item">
+              <a href="currency.html" class="active"><span class="material-icons-outlined">paid</span> Currencies</a>
+            </li>
+            <li class="list-group-item">
+              <a href="orders.html"><span class="material-icons-outlined">add_shopping_cart</span> Orders</a>
+            </li>
+            <li class="list-group-item">
+              <a href=""><span class="material-icons-outlined">groups</span> Staffs</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-lg-10">
+
+        <header>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-xxl ps-0">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Currencies</li>
+                  </ol>
+                </nav>
+                <div class="d-flex justify-content-end align-items-center flex-gap-10">
+                  <div class="dropdown rounded-circle">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      $ US Dollar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+        
+                  <div class="dropdown only-icon">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="icon-16"><img src="../img/flags/1x1/us.svg"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+        
+                  <div class="dropdown only-icon">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="material-icons">notifications</span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+        
+                  <div class="dropdown">
+                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Yas marina circuit
+                    </a>
+        
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+                    </ul>
+                  </div>
+                </div>
+      
+      
+              </div>
+            </div>
+          </nav>
+        </header>
+        <!--  -->
+
+        <main>
+          <p class="display-6 mb-1">Currencies</p>
+          <p class="text-muted">All exchange rates are based on 1 USD = ?</p>
+          <div class="table-wrapper cry-listing">
+            <p-treetable class="p-element">
+                <div data-scrollselectors=".p-treetable-scrollable-body" class="p-treetable p-component">
+                    <!---->
+                    <div class="p-datatable-header ng-star-inserted">
+                        <div class="table-header p-d-flex ng-star-inserted">
+                            <span _ngcontent-lvs-c133="" class="p-input-icon-left">
+                                <i _ngcontent-lvs-c133="" class="pi pi-search"></i>
+                                <input _ngcontent-lvs-c133="" pinputtext="" type="text" placeholder="Search for currency..." class="p-inputtext p-component p-element">
+                            </span>
+                            <button _ngcontent-khw-c151="" pbutton="" pripple="" label="New" icon="pi pi-plus" class="p-element p-ripple p-button-rounded p-mr-2 p-button p-component ng-star-inserted p-ml-auto" data-bs-toggle="modal" data-bs-target="#addCurrency">
+                                <span class="p-button-icon p-button-icon-left pi pi-plus" aria-hidden="true"></span>
+                                <span class="p-button-label">Add New</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file" ptooltip="CSV" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file-excel" ptooltip="XLS" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file-excel" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                            <button type="button" pbutton="" pripple="" icon="pi pi-file-pdf" ptooltip="PDF" tooltipposition="bottom" class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1">
+                                <span class="p-button-icon pi pi-file-pdf" aria-hidden="true"></span>
+                                <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                            </button>
+                          
+                        </div>
+                        <!---->
+                      </div>
+                    <!---->
+                    <!---->
+                    <div class="p-treetable-wrapper ng-star-inserted">
+                        <table>
+                            <!---->
+                            <thead class="p-treetable-thead">
+                                <tr class="ng-star-inserted">
+                                    <th class="p-element p-sortable-column ng-star-inserted" tabindex="0" role="columnheader"> Currency name
+                                        <p-treetablesorticon class="p-element"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                        </p-treetablesorticon>
+                                    </th>
+                                    <th class="p-element p-sortable-column ng-star-inserted" tabindex="0" role="columnheader"> Symbol
+                                        <p-treetablesorticon class="p-element"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                        </p-treetablesorticon>
+                                    </th>
+                                    <th class="p-element p-sortable-column ng-star-inserted" tabindex="0" role="columnheader"> Code
+                                        <p-treetablesorticon class="p-element"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                        </p-treetablesorticon>
+                                    </th>
+                                    <th class="p-element p-sortable-column ng-star-inserted" tabindex="0" role="columnheader">  Exchange rate
+                                        <p-treetablesorticon class="p-element"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                        </p-treetablesorticon>
+                                    </th>
+                                    <th class="p-element p-sortable-column ng-star-inserted" tabindex="0" role="columnheader">  Status
+                                        <p-treetablesorticon class="p-element"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                        </p-treetablesorticon>
+                                    </th>
+                                    <th></th>
+                                    <!---->
+                                </tr>
+                                <!---->
+                            </thead>
+                            <tbody class="p-element p-treetable-tbody">
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        United Arab Emirates Dirham
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        AED
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        AED
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        3.67
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish" checked>
+                                            <label class="form-check-label" for="statusPublish">Active</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" data-bs-toggle="modal" data-bs-target="#editCurrency">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text" type="button" data-bs-toggle="modal" data-bs-target="#deleteCurrency">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        U.S. Dollar
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        $
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        USD
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        1
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish" checked>
+                                            <label class="form-check-label" for="statusPublish">Active</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Danish Krone
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        kr
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        DKK
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        6.05
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Euro
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        €
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        EUR
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        0.85
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Hong Kong Dollar
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        $
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        HKD
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        7.83
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Indian rupee
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        ₹
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        INR
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        75.70
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Japanese Yen
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        ¥
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        JPY
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        114.20
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Canadian dollar
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        $
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        CAD
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        1.29
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <tr class="ng-star-inserted">
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        Swiss Franc
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!----> 
+                                        $
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        CHF
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <!---->
+                                        0.93
+                                    </td>
+                                    <td class="ng-star-inserted">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="statusPublish">
+                                            <label class="form-check-label" for="statusPublish">Inactive</label>
+                                        </div>
+                                    </td>
+                                    <!---->
+                                    <td>
+                                        <p-button icon="pi pi-search" styleclass="p-button-success" class="p-element">
+                                            <button pripple="" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button" style="margin-right: 0.5em;">
+                                                <!----><span class="pi pi-pencil p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                        <p-button icon="pi pi-pencil" styleclass="p-button-warning" class="p-element"><button
+                                                pripple=""
+                                                class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text"
+                                                type="button">
+                                                <!----><span class="pi pi-trash p-button-icon ng-star-inserted"
+                                                    aria-hidden="true"></span>
+                                                <!----><span class="p-button-label ng-star-inserted"
+                                                    aria-hidden="true">&nbsp;</span>
+                                                <!---->
+                                                <!----><span class="p-ink"></span>
+                                            </button></p-button>
+                                    </td>
+                                </tr>
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                                <!---->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!---->
+                    <!---->
+                    <p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted">
+                        <div class="p-paginator-bottom p-paginator p-component ng-star-inserted">
+                            <!----><span class="p-paginator-current ng-star-inserted">Showing 1 to 10 of 200 entries</span>
+                            <!----><button type="button" pripple=""
+                                class="p-ripple p-element p-paginator-first p-paginator-element p-link p-disabled ng-star-inserted"
+                                disabled=""><span class="p-paginator-icon pi pi-angle-double-left"></span><span
+                                    class="p-ink"></span></button>
+                            <!----><button type="button" pripple=""
+                                class="p-ripple p-element p-paginator-prev p-paginator-element p-link p-disabled" disabled=""><span
+                                    class="p-paginator-icon pi pi-angle-left"></span><span class="p-ink"></span></button><span
+                                class="p-paginator-pages ng-star-inserted"><button type="button" pripple=""
+                                    class="p-ripple p-element p-paginator-page p-paginator-element p-link p-highlight ng-star-inserted">1<span
+                                        class="p-ink"></span></button><button type="button" pripple=""
+                                    class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted">2<span
+                                        class="p-ink"></span></button><button type="button" pripple=""
+                                    class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted">3<span
+                                        class="p-ink"></span></button><button type="button" pripple=""
+                                    class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted">4<span
+                                        class="p-ink"></span></button><button type="button" pripple=""
+                                    class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted">5<span
+                                        class="p-ink"></span></button>
+                                <!---->
+                            </span>
+                            <!---->
+                            <!---->
+                            <button type="button" pripple="" class="p-ripple p-element p-paginator-next p-paginator-element p-link">
+                                <span class="p-paginator-icon pi pi-angle-right"></span>
+                                <span class="p-ink"></span>
+                            </button>
+                            <button type="button" pripple=""
+                                class="p-ripple p-element p-paginator-last p-paginator-element p-link ng-star-inserted">
+                                <span class="p-paginator-icon pi pi-angle-double-right"></span>
+                                <span class="p-ink"></span>
+                            </button>
+                            <!---->
+                            <!---->
+                            <p-dropdown styleclass="p-paginator-rpp-options"
+                                class="p-element p-inputwrapper ng-tns-c49-70 p-inputwrapper-filled ng-untouched ng-pristine ng-star-inserted ng-valid">
+                                <div class="ng-tns-c49-70 p-paginator-rpp-options p-dropdown p-component">
+                                    <div class="p-hidden-accessible ng-tns-c49-70"><input type="text" readonly="" aria-haspopup="listbox"
+                                            role="listbox" class="ng-tns-c49-70" aria-activedescendant="pr_id_75_label"></div><span
+                                        class="p-element ng-tns-c49-70 p-dropdown-label p-inputtext ng-star-inserted" id="pr_id_75_label">10
+                                        <!---->
+                                        <!---->
+                                        <!---->
+                                    </span>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <div role="button" aria-haspopup="listbox" class="p-dropdown-trigger ng-tns-c49-70"><span
+                                            class="p-dropdown-trigger-icon ng-tns-c49-70 pi pi-chevron-down"></span></div>
+                                    <!---->
+                                </div>
+                            </p-dropdown>
+                            <!---->
+                            <!---->
+                        </div>
+                        <!---->
+                    </p-paginator>
+                    <!---->
+                </div>
+            </p-treetable>
+        </div>
+
+
+        </main>
+        <!--  -->
+
+        <footer class="mt-5 bg-white">
+            <div class="container-xl">
+                <div class="d-flex justify-content-between align-items-center">
+                    <ul class="list-inline py-3 fs-6 mb-0 text-center">
+                        <li class="list-inline-item">
+                            <a href="#">Conditions of User &amp; Sale</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Notice</a>
+                        </li>
+                    </ul>
+                    <small class="">&copy; 2021-2022 B2B System. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!--  -->
+        
+      </div>
+    </div>
+    
+    
+    
+  </div>
+
+  
+
+
+
+<!-- Add currency modal -->
+<div class="modal fade side-open" id="addCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCurrencyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-light-grey">
+            <div class="modal-header bg-white">
+                <h3 class="modal-title" id="addCurrencyLabel">New currency</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="d-flex justify-content-between flex-gap-10 mb-5">
+                        <div class="form-floating w-100">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Choose your option</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            </select>
+                            <label for="floatingSelect">Currency name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="exchangeRate" placeholder="Exchange Rate">
+                            <label for="exchangeRate">Exchange rate</label>
+                        </div>
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                    
+                    <div class="table-wrapper cry-listing-modal">
+                        <p-table _ngcontent-khw-c151="" responsivelayout="scroll" datakey="id"
+                            currentpagereporttemplate="Showing {first} to {last} of {totalRecords} entries" class="p-element">
+                            <div id="pr_id_14" class="p-datatable p-component p-datatable-hoverable-rows p-datatable-responsive-scroll">
+                                <!---->
+                                <div class="p-datatable-wrapper">
+                                    <table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_14-table">
+                                        <!---->
+                                        <thead class="p-datatable-thead">
+                                            <tr _ngcontent-khw-c151="" class="ng-star-inserted">
+                                                <th _ngcontent-khw-c151="" style="width: 3rem;">
+                                                    <p-tableheadercheckbox _ngcontent-khw-c151="" class="p-element">
+                                                        <div class="p-checkbox p-component">
+                                                            <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                            <div role="checkbox" aria-checked="false" class="p-checkbox-box"><span
+                                                                    class="p-checkbox-icon"></span></div>
+                                                        </div>
+                                                    </p-tableheadercheckbox>
+                                                </th>
+                                                <th _ngcontent-khw-c151="" psortablecolumn="name" class="p-element p-sortable-column"
+                                                    tabindex="0" role="columnheader" aria-sort="none">Currency <p-sorticon _ngcontent-khw-c151=""
+                                                        field="name" class="p-element"><i
+                                                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                                        <!---->
+                                                    </p-sorticon>
+                                                </th>
+                                                <th _ngcontent-khw-c151="" psortablecolumn="price" class="p-element p-sortable-column"
+                                                    tabindex="0" role="columnheader" aria-sort="none">Symbol/Code <p-sorticon _ngcontent-khw-c151=""
+                                                        field="price" class="p-element"><i
+                                                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                                        <!---->
+                                                    </p-sorticon>
+                                                </th>
+                                                <th _ngcontent-khw-c151="" psortablecolumn="category" class="p-element p-sortable-column"
+                                                    tabindex="0" role="columnheader" aria-sort="none">Exchange rate<p-sorticon
+                                                        _ngcontent-khw-c151="" field="category" class="p-element"><i
+                                                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"></i>
+                                                        <!---->
+                                                    </p-sorticon>
+                                                </th>
+                                                <th _ngcontent-khw-c151=""></th>
+                                            </tr>
+                                            <!---->
+                                        </thead>
+                                        <!---->
+                                        <tbody class="p-element p-datatable-tbody">
+                                            <!---->
+                                            <tr _ngcontent-khw-c151="" class="ng-star-inserted">
+                                                <td _ngcontent-khw-c151="">
+                                                    <p-tablecheckbox _ngcontent-khw-c151="" class="p-element">
+                                                        <div class="p-checkbox p-component">
+                                                            <div class="p-hidden-accessible"><input type="checkbox"></div>
+                                                            <div role="checkbox" aria-checked="false" class="p-checkbox-box p-component"><span
+                                                                    class="p-checkbox-icon"></span></div>
+                                                        </div>
+                                                    </p-tablecheckbox>
+                                                </td>
+                                                <td _ngcontent-khw-c151="">Australia</td>
+                                                <td _ngcontent-khw-c151="">$ AUD</td>
+                                                <td _ngcontent-khw-c151="">1.38</td>
+                                                <td _ngcontent-khw-c151="">
+                                                    <button _ngcontent-khw-c151="" pbutton="" pripple="" icon="pi pi-trash" class="p-ripple p-element p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text">
+                                                        <span class="p-button-icon pi pi-trash" aria-hidden="true"></span>
+                                                        <span aria-hidden="true" class="p-button-label">&nbsp;</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                            <!---->
+                                        </tbody>
+                                        <!---->
+                                    </table>
+                                    <!---->
+                                    <!---->
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </p-table>
+                    </div>
+                    <div class="d-flex btn-wrapper">
+                        <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit currency modal -->
+<div class="modal fade side-open" id="editCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCurrencyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <form class="modal-content bg-light-grey">
+            <div class="modal-header bg-white">
+                <h3 class="modal-title" id="editCurrencyLabel">Edit currency</h3>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-between flex-gap-20 mb-3">
+                    <div class="form-floating w-75">
+                        <input type="email" class="form-control" id="editCurrencyfield" placeholder="Enter Currency name" value="United Arab Emirates Dirham" disabled>
+                        <label for="editCurrencyfield">Currency name</label>
+                    </div>
+                    <div class="form-floating w-25">
+                        <input type="number" class="form-control" id="editExchangeRate" placeholder="Exchange Rate" value="3.67">
+                        <label for="editExchangeRate">Exchange rate</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Update</button>
+              </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Delete event Modal -->
+<div class="modal fade" id="deleteCurrency" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content md-delete">
+        <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center flex-gap-10 fs-4" id="exampleModalLabel">
+                <span class="text-danger">Delete currency</span>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-reset">Deleting the currency will permanently remove from lists.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">No, Keep the currency </button>
+          <button type="button" class="btn btn-danger">Yes, Delete this currency</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/fesm2015/primeng-tooltip.mjs.map"></script>
+
+
+</body>
+
+</html>

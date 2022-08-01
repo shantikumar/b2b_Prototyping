@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <title>Orders</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/primeng.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/accordion/accordion.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/button/button.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/card/card.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/paginator/paginator.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/scrolltop/scrolltop.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/table/table.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tag/tag.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/toast/toast.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/toolbar/toolbar.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tooltip/tooltip.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/tree/tree.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treeselect/treeselect.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/components/treetable/treetable.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/primeicons@4.1.0/primeicons.css"
+      rel="stylesheet"
+    />
+    <link href="../css/primeNGstyles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/resources/themes/saga-blue/theme.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/customer/header.css" rel="stylesheet" />
+    <link href="../css/table.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-light-grey">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light shadow-sm hr-nav"
+      >
+        <div class="container-xxl">
+          <a class="navbar-brand" href="#">
+            <img
+              src="../img/customer/redbull_logo.svg"
+              alt="Redbull F1 Racing"
+              width="136"
+              height="40"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Orders</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Staffs</a></li>
+            </ul>
+
+            <div class="dropdown rounded-circle">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                $ US Dollar
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown only-icon">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="icon-16"
+                  ><img src="../img/flags/1x1/us.svg"
+                /></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown only-icon">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="material-icons">notifications</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <a
+                class="btn btn-light dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Yas marina circuit
+              </a>
+
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../index.html">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-xxl">
+      <main class="mt-4">
+        <p class="display-6">Orders</p>
+        <div class="table-wrapper ct-table-listing">
+          <p-table datakey="name" responsivelayout="scroll" class="p-element">
+            <div id="pr_id_36" class="p-datatable p-component">
+              <div class="p-datatable-header ng-star-inserted">
+                <div class="table-header p-d-flex ng-star-inserted">
+                  <span _ngcontent-lvs-c133="" class="p-input-icon-left"
+                    ><i _ngcontent-lvs-c133="" class="pi pi-search"></i
+                    ><input
+                      _ngcontent-lvs-c133=""
+                      pinputtext=""
+                      type="text"
+                      placeholder="Search for orders..."
+                      class="p-inputtext p-component p-element"
+                  /></span>
+                  <button
+                    type="button"
+                    pbutton=""
+                    pripple=""
+                    icon="pi pi-file"
+                    ptooltip="CSV"
+                    tooltipposition="bottom"
+                    class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1 p-ml-auto"
+                  >
+                    <span
+                      class="p-button-icon pi pi-file"
+                      aria-hidden="true"
+                    ></span>
+                    <span aria-hidden="true" class="p-button-label"
+                      >&nbsp;</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    pbutton=""
+                    pripple=""
+                    icon="pi pi-file-excel"
+                    ptooltip="XLS"
+                    tooltipposition="bottom"
+                    class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only p-mr-2 mt-1"
+                  >
+                    <span
+                      class="p-button-icon pi pi-file-excel"
+                      aria-hidden="true"
+                    ></span>
+                    <span aria-hidden="true" class="p-button-label"
+                      >&nbsp;</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    pbutton=""
+                    pripple=""
+                    icon="pi pi-file-pdf"
+                    ptooltip="PDF"
+                    tooltipposition="bottom"
+                    class="p-element p-ripple p-button-rounded p-button-secondary p-button-outlined p-button p-component p-button-icon-only mt-1"
+                  >
+                    <span
+                      class="p-button-icon pi pi-file-pdf"
+                      aria-hidden="true"
+                    ></span>
+                    <span aria-hidden="true" class="p-button-label"
+                      >&nbsp;</span
+                    >
+                  </button>
+                </div>
+                <!---->
+              </div>
+              <!---->
+              <!---->
+              <!---->
+              <div class="p-datatable-wrapper">
+                <table
+                  role="table"
+                  class="p-datatable-table ng-star-inserted"
+                  id="pr_id_36-table"
+                >
+                  <!---->
+                  <thead class="p-datatable-thead">
+                    <tr class="ng-star-inserted">
+                      <th
+                        psortablecolumn="name"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Order No.
+                        <p-sorticon field="name" class="p-element">
+                          <i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th
+                        psortablecolumn="price"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Date
+                        <p-sorticon field="price" class="p-element"
+                          ><i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th
+                        psortablecolumn="category"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Event
+                        <p-sorticon field="category" class="p-element"
+                          ><i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th
+                        psortablecolumn="rating"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Customer
+                        <p-sorticon field="rating" class="p-element"
+                          ><i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th
+                        psortablecolumn="inventoryStatus"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Amount
+                        <p-sorticon field="inventoryStatus" class="p-element"
+                          ><i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th
+                        psortablecolumn="inventoryStatus"
+                        class="p-element p-sortable-column"
+                        tabindex="0"
+                        role="columnheader"
+                        aria-sort="none"
+                      >
+                        Status
+                        <p-sorticon field="inventoryStatus" class="p-element"
+                          ><i
+                            class="p-sortable-column-icon pi pi-fw pi-sort-alt"
+                          ></i>
+                          <!---->
+                        </p-sorticon>
+                      </th>
+                      <th style="width: 3rem"></th>
+                    </tr>
+                    <!---->
+                  </thead>
+                  <!---->
+                  <tbody class="p-element p-datatable-tbody">
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td>
+                        <a
+                          href=""
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOrder"
+                          >18130662</a
+                        >
+                      </td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Alfa Romeo F1 Team ORLEN</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-unqualified"
+                          >pending resubmission</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-up"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td colspan="7">
+                        <div class="p-p-3">
+                          <p-table datakey="id" class="p-element">
+                            <div
+                              id="pr_id_38"
+                              class="p-datatable p-component p-datatable-responsive-stack"
+                            >
+                              <!---->
+                              <!---->
+                              <!---->
+                              <div class="p-datatable-wrapper">
+                                <table
+                                  role="table"
+                                  class="p-datatable-table ng-star-inserted"
+                                  id="pr_id_38-table"
+                                >
+                                  <!---->
+                                  <thead class="p-datatable-thead">
+                                    <tr class="ng-star-inserted">
+                                      <th>Total products</th>
+                                      <th>Focal point</th>
+                                      <th>Payment status</th>
+                                      <th style="width: 4rem"></th>
+                                    </tr>
+                                  </thead>
+                                  <!---->
+                                  <tbody class="p-element p-datatable-tbody">
+                                    <!---->
+                                    <tr class="ng-star-inserted">
+                                      <td>3</td>
+                                      <td>Yas Marina Circuit</td>
+                                      <td>
+                                        <span
+                                          class="customer-badge status-unqualified"
+                                          >Unpaid</span
+                                        >
+                                      </td>
+                                      <td>
+                                        <a href=""
+                                          ><i class="pi pi-download me-2"></i
+                                          >Download invoice</a
+                                        >
+                                      </td>
+                                    </tr>
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                    <!---->
+                                  </tbody>
+                                  <!---->
+                                </table>
+                                <!---->
+                                <!---->
+                              </div>
+                              <!---->
+                              <!---->
+                              <!---->
+                              <!---->
+                              <!---->
+                            </div>
+                          </p-table>
+                        </div>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Red Bull Racing</td>
+                      <td>$121,756.00</td>
+                      <td>
+                        <span class="customer-badge status-proposal"
+                          >Pending Approval</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-down"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Scuderia AlphaTauri</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-new">Approved</span>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Scuderia Ferrari</td>
+                      <td>$156.00</td>
+                      <td>
+                        <span class="customer-badge status-qualified"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Williams Racing</td>
+                      <td>$6960.00</td>
+                      <td>
+                        <span class="customer-badge status-renewal"
+                          >Invoiced</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Mercedes-AMG Petronas Formula One Team</td>
+                      <td>$13,286.00</td>
+                      <td>
+                        <span class="customer-badge status-negotiation"
+                          >Cancelled</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Alpine F1 Team</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-unqualified"
+                          >pending resubmission</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Alfa Romeo F1 Team ORLEN</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-qualified"
+                          >Paid</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Alpine F1 Team</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-unqualified"
+                          >pending resubmission</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr class="ng-star-inserted">
+                      <td><a href="">18130662</a></td>
+                      <td>19-09-2021</td>
+                      <td>Etihad Airways Abu Dhabi Grand Prix 2021</td>
+                      <td>Uralkali Haas F1 Team</td>
+                      <td>$12,756.00</td>
+                      <td>
+                        <span class="customer-badge status-unqualified"
+                          >pending resubmission</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          pbutton=""
+                          pripple=""
+                          class="p-button p-component p-button-icon-only p-element p-button-text p-button-rounded p-button-plain"
+                        >
+                          <span
+                            class="p-button-icon p-button-icon-left pi pi-chevron-right"
+                            aria-hidden="true"
+                          ></span>
+                          <span aria-hidden="true" class="p-button-label"
+                            >&nbsp;</span
+                          >
+                        </button>
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </tbody>
+                  <!---->
+                </table>
+                <!---->
+                <!---->
+              </div>
+              <!---->
+              <!---->
+              <!---->
+              <p-paginator
+                styleclass="p-paginator-bottom"
+                class="p-element ng-star-inserted"
+                ><div
+                  class="p-paginator-bottom p-paginator p-component ng-star-inserted"
+                >
+                  <!----><span class="p-paginator-current ng-star-inserted"
+                    >Showing 1 to 10 of 200 entries</span
+                  ><!----><button
+                    type="button"
+                    pripple=""
+                    class="p-ripple p-element p-paginator-first p-paginator-element p-link p-disabled ng-star-inserted"
+                    disabled=""
+                  >
+                    <span
+                      class="p-paginator-icon pi pi-angle-double-left"
+                    ></span
+                    ><span class="p-ink"></span></button
+                  ><!----><button
+                    type="button"
+                    pripple=""
+                    class="p-ripple p-element p-paginator-prev p-paginator-element p-link p-disabled"
+                    disabled=""
+                  >
+                    <span class="p-paginator-icon pi pi-angle-left"></span
+                    ><span class="p-ink"></span></button
+                  ><span class="p-paginator-pages ng-star-inserted"
+                    ><button
+                      type="button"
+                      pripple=""
+                      class="p-ripple p-element p-paginator-page p-paginator-element p-link p-highlight ng-star-inserted"
+                    >
+                      1<span class="p-ink"></span></button
+                    ><button
+                      type="button"
+                      pripple=""
+                      class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted"
+                    >
+                      2<span class="p-ink"></span></button
+                    ><button
+                      type="button"
+                      pripple=""
+                      class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted"
+                    >
+                      3<span class="p-ink"></span></button
+                    ><button
+                      type="button"
+                      pripple=""
+                      class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted"
+                    >
+                      4<span class="p-ink"></span></button
+                    ><button
+                      type="button"
+                      pripple=""
+                      class="p-ripple p-element p-paginator-page p-paginator-element p-link ng-star-inserted"
+                    >
+                      5<span class="p-ink"></span></button
+                    ><!----></span
+                  ><!----><!----><button
+                    type="button"
+                    pripple=""
+                    class="p-ripple p-element p-paginator-next p-paginator-element p-link"
+                  >
+                    <span class="p-paginator-icon pi pi-angle-right"></span
+                    ><span class="p-ink"></span></button
+                  ><button
+                    type="button"
+                    pripple=""
+                    class="p-ripple p-element p-paginator-last p-paginator-element p-link ng-star-inserted"
+                  >
+                    <span
+                      class="p-paginator-icon pi pi-angle-double-right"
+                    ></span
+                    ><span class="p-ink"></span></button
+                  ><!----><!----><p-dropdown
+                    styleclass="p-paginator-rpp-options"
+                    class="p-element p-inputwrapper ng-tns-c49-70 p-inputwrapper-filled ng-untouched ng-pristine ng-star-inserted ng-valid"
+                    ><div
+                      class="ng-tns-c49-70 p-paginator-rpp-options p-dropdown p-component"
+                    >
+                      <div class="p-hidden-accessible ng-tns-c49-70">
+                        <input
+                          type="text"
+                          readonly=""
+                          aria-haspopup="listbox"
+                          role="listbox"
+                          class="ng-tns-c49-70"
+                          aria-activedescendant="pr_id_75_label"
+                        />
+                      </div>
+                      <span
+                        class="p-element ng-tns-c49-70 p-dropdown-label p-inputtext ng-star-inserted"
+                        id="pr_id_75_label"
+                        >10<!----><!----><!----></span
+                      ><!----><!----><!----><!---->
+                      <div
+                        role="button"
+                        aria-haspopup="listbox"
+                        class="p-dropdown-trigger ng-tns-c49-70"
+                      >
+                        <span
+                          class="p-dropdown-trigger-icon ng-tns-c49-70 pi pi-chevron-down"
+                        ></span>
+                      </div>
+                      <!---->
+                    </div></p-dropdown
+                  ><!----><!---->
+                </div>
+                <!----></p-paginator
+              >
+              <!---->
+              <!---->
+            </div>
+          </p-table>
+        </div>
+      </main>
+    </div>
+
+    <footer class="mt-5 bg-white">
+      <div class="container-xl">
+        <ul class="list-inline py-3 fs-6 mb-0 text-center">
+          <li class="list-inline-item">
+            <a href="#">Conditions of User &amp; Sale</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Privacy Notice</a>
+          </li>
+          <li class="list-inline-item">
+            &copy; 2021-2022 B2B System. All Rights Reserved.
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade side-open"
+      id="modalOrder"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalOrderLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/primeng/13.0.4/fesm2015/primeng-tooltip.mjs.map"></script>
+  </body>
+</html>
