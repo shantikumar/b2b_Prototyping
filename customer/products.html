@@ -979,6 +979,51 @@
       </div>
     </div>
 
+
+    <!-- Modal -->
+    <div
+      class="modal fade side-open"
+      id="termsAndConditions"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content termsAndConditionsModal">
+          <div class="modal-header border-0">
+            <div class="terms-and-conditions-title" id="staticBackdropLabel">
+              Terms & Conditions
+            </div>
+            <button
+              type="button"
+              class="btn-close terms-and-conditions-close"
+              data-bs-toggle="modal"
+              data-bs-target="#shoppingCart"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body termsAndConditionsBody">
+            <p>Use of this site is provided by Demos subject to the following Terms and Conditions:</p>
+            <div>1. Your use constitutes acceptance of these Terms and Conditions as at the date of your first use of the site.</div>
+            <div>2. Demos reserves the rights to change these Terms and Conditions at any time by posting changes online. Your continued use of this site after changes are posted constitutes your acceptance of this agreement as modified.</div>
+            <div>3. You agree to use this site only for lawful purposes, and in a manner which does not infringe the rights, or restrict, or inhibit the use and enjoyment of the site by any third party.</div>
+            <div>4. This site and the information, names, images, pictures, logos regarding or relating to Demos are provided “as is” without any representation or endorsement made and without warranty of any kind whether express or implied. In no event will Demos be liable for any damages including, without limitation, indirect or consequential damages, or any damages whatsoever arising from the use or in connection with such use or loss of use of the site, whether in contract or in negligence.</div>
+            <div>5. Demos does not warrant that the functions contained in the material contained in this site will be uninterrupted or error free, that defects will be corrected, or that this site or the server that makes it available are free of viruses or bugs or represents the full functionality, accuracy and reliability of the materials.</div>
+            <div>6. Copyright restrictions: please refer to our Creative Commons license terms governing the use of material on this site.</div>
+            <div>7. Demos takes no responsibility for the content of external Internet Sites.</div>
+            <div>8. Any communication or material that you transmit to, or post on, any public area of the site including any data, questions, comments, suggestions, or the like, is, and will be treated as, non-confidential and non-proprietary information.</div>
+            <div>9. If there is any conflict between these Terms and Conditions and rules and/or specific terms of use appearing on this site relating to specific material then the latter shall prevail.</div>
+            <div>10. These terms and conditions shall be governed and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the Courts of England and Wales.</div>
+            <div>11. If these Terms and Conditions are not accepted in full, the use of this site must be terminated immediately. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Shopping Cart-->
 
     <div
@@ -1218,7 +1263,8 @@
                       id="agree-terms"
                     />
                     <label class="form-check-label" for="agree-terms">
-                      I agree the <a href="#"> terms & conditions </a>
+                      I agree the <a data-bs-toggle="modal"
+                      data-bs-target="#termsAndConditions" class="terms-and-conditions-link"> terms & conditions </a>
                       <small class="text-muted ps-1"></small>
                     </label>
                   </div>
